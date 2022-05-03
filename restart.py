@@ -8,23 +8,27 @@ import time
 PATH = "/usr/local/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
 
-driver.get("https://www.instagram.com/")
+driver.get("https://www.avisosdeocasion.com/autos-usados-y-nuevos.aspx?PlazaBusqueda=2&utm_campaign=include_avisos_en_portada_elnorte&utm_source=categorias&utm_medium=vehiculos")
 
-print(driver.title)
+#print(driver.title)
 
+def field():
+	try:
+		vehiculo = WebDriverWait(driver, 10).until(
+			EC.presence_of_element_located((By.NAME, "txtBusquedaPalabraMaster"))
+		)
+	except:
+		driver.quit()
 
-try:
-    main = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.NAME, "username"))
-    )
-	#main.send_keys(Keys.RETURN)
-except:
-    driver.quit()
+	time.sleep(5)
+	vehiculo.send_keys("Hyundai Accent")
+	vehiculo.send_keys(Keys.RETURN)
 
-main.send_keys("Test")
+field()
+print("done vehiculo")
 
+#field("Marcas", "marcas", "HYUNDAI")
 
-time.sleep(5)
 
 #driver.quit() quits all https://www.youtube.com/watch?v=Xjv1sY630Uc&ab_channel=TechWithTim
 #driver.close() closes tab
