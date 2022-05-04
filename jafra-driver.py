@@ -32,7 +32,23 @@ field("pwd_h", "****")
 password = driver.find_element_by_id("pwd_h")
 password.send_keys(Keys.ENTER)
 
-print("done vehiculo")
+print("Authentication Passed")
+
+#driver.get("https://www.jafranet.com.mx/JntCgi/JNTDCXANI.pgm")
+#list = driver.find_element_by_class_name("list-unstyled")
+#list.send_keys()
+#
+#public class MouseHover1 {
+#
+#    public static WebDriver driver;
+#
+#    public static void main(String[] args) {
+#actions = new Actions(driver)
+#list = driver.find_element_by_class_name("list-unstyled")
+#actions.moveToElement(menuOption).perform()
+#	}
+#
+#
 
 #field("Marcas", "marcas", "HYUNDAI")
 #https://www.youtube.com/watch?v=b5jt2bhSeXs&ab_channel=TechWithTim
