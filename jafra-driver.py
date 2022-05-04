@@ -8,23 +8,27 @@ import time
 PATH = "/usr/local/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
 
-driver.get("https://www.avisosdeocasion.com/autos-usados-y-nuevos.aspx?PlazaBusqueda=2&utm_campaign=include_avisos_en_portada_elnorte&utm_source=categorias&utm_medium=vehiculos")
+driver.get("http://www.jafranet.com.mx")
 
 #print(driver.title)
 
-def field():
+def field(id,input):
 	try:
-		vehiculo = WebDriverWait(driver, 10).until(
-			EC.presence_of_element_located((By.NAME, "txtBusquedaPalabraMaster"))
+		fd = WebDriverWait(driver, 10).until(
+			EC.presence_of_element_located((By.ID,id))
 		)
 	except:
 		driver.quit()
 
-	time.sleep(5)
-	vehiculo.send_keys("Hyundai Accent")
-	vehiculo.send_keys(Keys.RETURN)
+	time.sleep(3)
+	fd.send_keys(Keys.TAB)
+	fd.send_keys(input)
 
-field()
+
+field("cta_h","1033094")
+field("pwd_h", "****")
+field.send_keys(Keys.ENTER)
+
 print("done vehiculo")
 
 #field("Marcas", "marcas", "HYUNDAI")
