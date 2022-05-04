@@ -21,13 +21,16 @@ def field(id,input):
 		driver.quit()
 
 	time.sleep(3)
-	fd.send_keys(Keys.TAB)
 	fd.send_keys(input)
 
 
 field("cta_h","1033094")
+username = driver.find_element_by_id("cta_h")
+username.send_keys(Keys.TAB)
+
 field("pwd_h", "****")
-field.send_keys(Keys.ENTER)
+password = driver.find_element_by_id("pwd_h")
+password.send_keys(Keys.ENTER)
 
 print("done vehiculo")
 
