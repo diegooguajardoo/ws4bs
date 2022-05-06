@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys #tto be able to input Enter Key
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 import time
 
 PATH = "/usr/local/bin/chromedriver"
@@ -35,10 +36,17 @@ password.send_keys(Keys.ENTER)
 print("Authentication Passed")
 
 #driver.get("https://www.jafranet.com.mx/JntCgi/JNTDCXANI.pgm")
-list = driver.find_element(By.CLASS_NAME, value="list-unstyled")
+#list = driver.find_element(By.CLASS_NAME, value="list-unstyled")
 
+try:
+	fd = WebDriverWait(driver, 20).until(
+		EC.presence_of_element_located((By.ID, "ulMenus"))
+	)
+except:
+	driver.quit()
 
-
+link = driver.find_element(By.LINK_TEXT, "Actualizado por animador")
+link.click()
 
 #driver.quit() quits all https://www.youtube.com/watch?v=Xjv1sY630Uc&ab_channel=TechWithTim
 #driver.close() closes tab
