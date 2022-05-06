@@ -20,38 +20,24 @@ def field(id,input):
 	except:
 		driver.quit()
 
-	time.sleep(3)
+	time.sleep(2)
 	fd.send_keys(input)
 
 
 field("cta_h","1033094")
-username = driver.find_element_by_id("cta_h")
+username = driver.find_element(By.ID,"cta_h")
 username.send_keys(Keys.TAB)
 
 field("pwd_h", "****")
-password = driver.find_element_by_id("pwd_h")
+password = driver.find_element(By.ID,"pwd_h")
 password.send_keys(Keys.ENTER)
 
 print("Authentication Passed")
 
 #driver.get("https://www.jafranet.com.mx/JntCgi/JNTDCXANI.pgm")
-#list = driver.find_element_by_class_name("list-unstyled")
-#list.send_keys()
-#
-#public class MouseHover1 {
-#
-#    public static WebDriver driver;
-#
-#    public static void main(String[] args) {
-#actions = new Actions(driver)
-#list = driver.find_element_by_class_name("list-unstyled")
-#actions.moveToElement(menuOption).perform()
-#	}
-#
-#
+list = driver.find_element(By.CLASS_NAME, value="list-unstyled")
 
-#field("Marcas", "marcas", "HYUNDAI")
-#https://www.youtube.com/watch?v=b5jt2bhSeXs&ab_channel=TechWithTim
+
 
 
 #driver.quit() quits all https://www.youtube.com/watch?v=Xjv1sY630Uc&ab_channel=TechWithTim
