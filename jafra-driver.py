@@ -16,7 +16,7 @@ driver.get("http://www.jafranet.com.mx")
 def field(id,input):
 	try:
 		fd = WebDriverWait(driver, 10).until(
-			EC.presence_of_element_located((By.ID,id))
+			EC.presence_of_element_located((By.ID, id))
 		)
 	except:
 		driver.quit()
@@ -29,7 +29,7 @@ field("cta_h","1033094")
 username = driver.find_element(By.ID,"cta_h")
 username.send_keys(Keys.TAB)
 
-field("pwd_h", "****")
+field("pwd_h", "2181")
 password = driver.find_element(By.ID,"pwd_h")
 password.send_keys(Keys.ENTER)
 
@@ -40,13 +40,16 @@ print("Authentication Passed")
 
 try:
 	fd = WebDriverWait(driver, 20).until(
-		EC.presence_of_element_located((By.ID, "ulMenus"))
+            EC.presence_of_element_located(
+            	(By.ID, "reporte"))
 	)
+	print(fd)
 except:
+	print(f"Failed to find: {fd}")
 	driver.quit()
 
-link = driver.find_element(By.LINK_TEXT, "Actualizado por animador")
-link.click()
+#link = driver.find_element(By.LINK_TEXT, "Actualizado por animador")
+#link.click()
 
 #driver.quit() quits all https://www.youtube.com/watch?v=Xjv1sY630Uc&ab_channel=TechWithTim
 #driver.close() closes tab
