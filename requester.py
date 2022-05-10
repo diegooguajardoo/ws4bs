@@ -5,8 +5,9 @@ from requests_html import HTML, HTMLSession
 #	html = HTML(html=source)
 
 session = HTMLSession()
-r = session.get("https://docs.python-requests.org/en/master/user/quickstart//")
+r = session.get(
+    "https://www.jcchouinard.com/web-scraping-with-python-and-requests-html/")
 
-section = r.html.find("document", first=True)
-
-print(section.html)
+titles = r.html.find("h2")
+for title in titles:
+	print(title.text)
