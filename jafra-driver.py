@@ -3,6 +3,8 @@ from selenium.webdriver.common.keys import Keys #tto be able to input Enter Key
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 import time
 
@@ -34,9 +36,15 @@ password = driver.find_element(By.ID,"pwd_h")
 password.send_keys(Keys.ENTER)
 
 print("Authentication Passed")
+Auth = True
 
 #driver.get("https://www.jafranet.com.mx/JntCgi/JNTDCXANI.pgm")
 #list = driver.find_element(By.CLASS_NAME, value="list-unstyled")
+
+if Auth == True:
+	saveas = ActionChains(driver).key_down(Keys.CONTROL)\
+	    .key_down('s').key_up(Keys.CONTROL).key_up('s')
+	saveas.perform()
 
 try:
 	fd = WebDriverWait(driver, 20).until(
