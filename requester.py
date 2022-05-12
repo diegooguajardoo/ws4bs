@@ -19,10 +19,14 @@ table_body = report.find("tbody", first= True)
 print(f"Table_body is: {type(table_body)}")
 #print(table.text[0:100]) #prints table body section
 
-resultsofsearch = table_body.find("tr")
-print(resultsofsearch[3].text)
 
+def looker(pt):
+	resultsofsearch = table_body.find("tr")
+	rst = (resultsofsearch[pt].text)
+	tbl = rst.split(sep="\n")
+	print(tbl)
 
+looker(6)
 
 rw = table_body.find("tr",first=True).text
 
@@ -68,9 +72,11 @@ def list_split(listA, n):
 
 #print(tp)
 
-with open('jafra.csv', 'w',) as csvfile:
-	csvwriter = csv.writer(csvfile)
-	csvwriter.writerow(list_rows)
+#with open('jafra.csv', 'w',) as csvfile:
+#	csvwriter = csv.writer(csvfile)
+#	for i in range(0,10):
+#		looker(i)
+#		#csvwriter.writerow(list_rows)
 
 
 
