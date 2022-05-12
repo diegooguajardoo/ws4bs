@@ -14,23 +14,54 @@ count =0
 data_from_file = html.text
 
 report = html.find(".table-blk#reporte", first=True)
+print(f"Report is :{type(report)}")
 table_body = report.find("tbody", first= True)
+print(f"Table_body is: {type(table_body)}")
 #print(table.text[0:100]) #prints table body section
 
-tabletxt = table_body.text
-tp = tabletxt.splitlines()
+resultsofsearch = table_body.find("tr")
+print(resultsofsearch[3].text)
+
+
+
+rw = table_body.find("tr",first=True).text
+
+table_body = str(table_body.text)
+line = table_body.split(sep="\n")
+print(type(line))
+
+rw = str(rw)
+print(f"Rw is: {type(rw)}")
+
+list_rows = rw.split(sep="\n")
+print(f"ListRows is: {type(list_rows)}")
+
+tabletxt = table_body
+print(f"Tabletxt is: {type(tabletxt)}")
+#print(tabletxt)
+
+print(type(list_rows))
+print(list_rows)
+
+#tp = tabletxt.splitlines()
+#print(len(tp))
 
 def list_split(listA, n):
-	for x in range(0, len(listA), n):
-		loc = listA.index("D")
-		every_chunk = listA[x: n+x]   #chunks are additive and need to be divided into chunks when "D" condition is met.
-
+	for x in range(0, len(listA)):
+		if x == "D":
+			loc = listA.index("D")
+		elif x == "I":
+			loc = listA.index("I")
+		every_chunk = listA[loc+1: loc+n]   #chunks are additive and need to be divided into chunks when "D" condition is met.
+		new_table = new_table.append(every_chunk)
+		
 		if len(every_chunk) < n:
 			every_chunk = every_chunk + \
 			[None for y in range(n-len(every_chunk))]
 		yield every_chunk
+	print(new_table)
 
-tp=(list(list_split(tp,19)))
+#list(list_split(tp,23))
 
 #header = ["Nombre", "Veliz", "Saldo"]
 #data = ["Nora", "1033094", "$0"] needed headers for new table
@@ -39,11 +70,15 @@ tp=(list(list_split(tp,19)))
 
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
-	
-	csvwriter.writerows(tp[:len(tp)])
-	if tp == "I":
-		print("FOUND")
+	csvwriter.writerow(list_rows)
 
+
+
+#x=0
+#y= tp.index("D")
+#
+#for item in range(x:y):
+#	csvwriter.writerows(item)
 
 
 #for i in data:
