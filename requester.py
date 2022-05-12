@@ -24,9 +24,10 @@ def looker(pt):
 	resultsofsearch = table_body.find("tr")
 	rst = (resultsofsearch[pt].text)
 	tbl = rst.split(sep="\n")
-	print(tbl)
+	return tbl
 
-looker(7)
+for i in range(1,5):
+	print(looker(i))
 
 rw = table_body.find("tr",first=True).text
 table_body = str(table_body.text)
