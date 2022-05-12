@@ -26,7 +26,7 @@ def looker(pt):
 	tbl = rst.split(sep="\n")
 	return tbl
 
-for i in range(1,5):
+for i in range(0,3):
 	print(looker(i))
 
 rw = table_body.find("tr",first=True).text
