@@ -34,7 +34,7 @@ def selector(n):
 
 #masterlist = selector(7)
 master2 = []
-for i in range(0,3):
+for i in range(1,60):
 	master2.extend(selector(i))
 
 rw = table_body.find("tr",first=True).text
