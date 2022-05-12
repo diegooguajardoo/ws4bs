@@ -26,8 +26,13 @@ def looker(pt):
 	tbl = rst.split(sep="\n")
 	return tbl
 
-for i in range(0,3):
-	print(looker(i))
+def selector(n):
+	master = []
+	for i in range(n*3-3,n*3-1):
+		master.append(looker(i))
+	print(master)
+
+selector(3)
 
 rw = table_body.find("tr",first=True).text
 table_body = str(table_body.text)
@@ -74,7 +79,7 @@ def list_split(listA, n):
 
 #with open('jafra.csv', 'w',) as csvfile:
 #	csvwriter = csv.writer(csvfile)
-#	for i in range(1,2):
+#	for i in range(0,3):
 #		csvwriter.writerows(looker(i))
 
 
