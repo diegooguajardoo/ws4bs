@@ -14,9 +14,9 @@ count =0
 data_from_file = html.text
 
 report = html.find(".table-blk#reporte", first=True)
-print(f"Report is :{type(report)}")
+#print(f"Report is :{type(report)}")
 table_body = report.find("tbody", first= True)
-print(f"Table_body is: {type(table_body)}")
+#print(f"Table_body is: {type(table_body)}")
 #print(table.text[0:100]) #prints table body section
 
 
@@ -26,26 +26,25 @@ def looker(pt):
 	tbl = rst.split(sep="\n")
 	print(tbl)
 
-looker(6)
+looker(7)
 
 rw = table_body.find("tr",first=True).text
-
 table_body = str(table_body.text)
 line = table_body.split(sep="\n")
-print(type(line))
+#print(type(line))
 
-rw = str(rw)
-print(f"Rw is: {type(rw)}")
+#rw = str(rw)
+#print(f"Rw is: {type(rw)}")
 
-list_rows = rw.split(sep="\n")
-print(f"ListRows is: {type(list_rows)}")
+#list_rows = rw.split(sep="\n")
+#print(f"ListRows is: {type(list_rows)}")
 
-tabletxt = table_body
-print(f"Tabletxt is: {type(tabletxt)}")
+#tabletxt = table_body
+#print(f"Tabletxt is: {type(tabletxt)}")
 #print(tabletxt)
 
-print(type(list_rows))
-print(list_rows)
+#print(type(list_rows))
+#print(list_rows)
 
 #tp = tabletxt.splitlines()
 #print(len(tp))
@@ -74,9 +73,8 @@ def list_split(listA, n):
 
 #with open('jafra.csv', 'w',) as csvfile:
 #	csvwriter = csv.writer(csvfile)
-#	for i in range(0,10):
-#		looker(i)
-#		#csvwriter.writerow(list_rows)
+#	for i in range(1,2):
+#		csvwriter.writerows(looker(i))
 
 
 
