@@ -32,7 +32,10 @@ def selector(n):
 		master.append(looker(i))
 	return master
 
-masterlist = selector(2)
+#masterlist = selector(7)
+master2 = []
+for i in range(0,3):
+	master2.extend(selector(i))
 
 rw = table_body.find("tr",first=True).text
 table_body = str(table_body.text)
@@ -77,9 +80,10 @@ def list_split(listA, n):
 
 #print(tp)
 
+
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
-	csvwriter.writerows(masterlist)
+	csvwriter.writerows(master2)
 
 
 
