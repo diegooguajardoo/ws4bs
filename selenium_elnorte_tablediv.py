@@ -4,16 +4,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import csv
 
 PATH = "/usr/local/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
 
-driver.get("https://www.avisosdeocasion.com/Detalle-Vehiculo.aspx?PlazaBusqueda=2&ClaveAviso=31358151&Plaza=2&Vehiculo=AUTOS&Modelo-Vehiculo=MUSTANG%20MACH-E%201973&Precio-Vehiculo=495000&Imagenes=16&id_vehiculo=1")
+driver.get("https://www.avisosdeocasion.com/Detalle-Vehiculo.aspx?PlazaBusqueda=2&ClaveAviso=31360661&Plaza=2&Vehiculo=AUTOS&Modelo-Vehiculo=MINI%20CLUBMAN%202018&Precio-Vehiculo=478000&Imagenes=16&id_vehiculo=1")
 
 #print(driver.title)
 
 
-
+master = []
 def Rawdata(clss,clk):
 	try:
 		vehiculo = WebDriverWait(driver, 10).until(
@@ -22,7 +23,10 @@ def Rawdata(clss,clk):
 		
 		if clk == True:
 			driver.find_element(by=By.CLASS_NAME,value=clss).click()
-		print("Found raw data")
+		table = vehiculo.find_elements(By.TAG_NAME, "tbody")
+		for i in table:
+			print(i.text)
+			master =  i.text.split(sep="\n")
 	except:
 		driver.quit()
 
@@ -32,13 +36,13 @@ def Rawdata(clss,clk):
 
 
 Rawdata(clss="ar13gris",clk=False)
-table = driver.find_elements(By.TAG_NAME, "tbody")
-for i in table:
-	print(i.text)
-print("table found")
 
 Rawdata(clss="navtool_right",clk=True)
-print("done vehiculo")
+print("NEXT\n")
+
+with open("autos.csv", "w") as csvfile:
+	csvwriter = csv.writer(csvfile)
+	csvwriter.writerow(master)
 
 #Rawdata("Marcas", "marcas", "HYUNDAI")
 #https://www.youtube.com/watch?v=b5jt2bhSeXs&ab_channel=TechWithTim
