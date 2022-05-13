@@ -21,7 +21,7 @@ def Rawdata(clss,clk):
 		)
 		
 		if clk == True:
-			driver.find_element_by_class_name(clss).click()
+			driver.find_element(by=By.CLASS_NAME,value=clss).click()
 		print("Found raw data")
 	except:
 		driver.quit()
@@ -32,6 +32,11 @@ def Rawdata(clss,clk):
 
 
 Rawdata(clss="ar13gris",clk=False)
+table = driver.find_elements(By.TAG_NAME, "tbody")
+for i in table:
+	print(i.text)
+print("table found")
+
 Rawdata(clss="navtool_right",clk=True)
 print("done vehiculo")
 
