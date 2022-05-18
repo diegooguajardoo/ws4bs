@@ -13,18 +13,25 @@ table_body = report.find("tbody", first= True)
 table_data = table_body.find("td")
 initial = table_data[0].text
 
-animadoras = []
-acc = 0
-for e in range(1,2):
-	animadora = []
-	for i in range(0,23):
-		cell = table_data[acc+e].text
-		acc =+ 1
-		animadora.append(cell)   ##revisar esta secuencia
-animadoras.append(animadora)
 
-def looker(pt):
-	resultsofsearch = table_body.find("tr")
+table_head = report.find("th")
+table_head = table_head[0].text
+header = table_head.split(sep="\n")
+
+
+animadoras = []
+count = 0
+for e in range(1,6):
+	animadora = []
+	for i in range(0,25):
+		cell = table_data[count+i].text
+		animadora.append(cell)   ##revisar esta secuencia
+	count = count + i
+	animadoras.append(animadora)
+print(animadoras)
+
+def looker(pt,elem):
+	resultsofsearch = table_body.find(elem)
 	rst = (resultsofsearch[pt].text)
 	tbl = rst.splitlines()
 	return tbl
@@ -32,7 +39,7 @@ def looker(pt):
 def selector(n):
 	master = []
 	for i in range(n*3-3,n*3-1):
-		master.append(looker(i))
+		master.append(looker(i,elem="tr"))
 	return master
 
 master2 = []
@@ -61,4 +68,5 @@ def list_split(listA, n):
 
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
+	csvwriter.writerows(header)
 	csvwriter.writerows(animadoras)
