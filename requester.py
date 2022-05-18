@@ -7,23 +7,26 @@ with open ("JAFRAnet.html", errors="ignore") as html_file:
 	source = html_file.read()
 	html = HTML(html=source)
 	html.render()
-	#names = html.find("element.head", first=True)
-#print(html.text)
-
-count =0
-data_from_file = html.text
 
 report = html.find(".table-blk#reporte", first=True)
-#print(f"Report is :{type(report)}")
 table_body = report.find("tbody", first= True)
-#print(f"Table_body is: {type(table_body)}")
-#print(table.text[0:100]) #prints table body section
+table_data = table_body.find("td")
+initial = table_data[0].text
 
+animadoras = []
+acc = 0
+for e in range(1,2):
+	animadora = []
+	for i in range(0,23):
+		cell = table_data[acc+e].text
+		acc =+ 1
+		animadora.append(cell)   ##revisar esta secuencia
+animadoras.append(animadora)
 
 def looker(pt):
 	resultsofsearch = table_body.find("tr")
 	rst = (resultsofsearch[pt].text)
-	tbl = rst.split(sep="\n")
+	tbl = rst.splitlines()
 	return tbl
 
 def selector(n):
@@ -32,31 +35,13 @@ def selector(n):
 		master.append(looker(i))
 	return master
 
-#masterlist = selector(7)
 master2 = []
-for i in range(1,60):
+rw = table_body.find("tr",first=True).text
+for i in range(1,int((len(rw)/2))-5):
 	master2.extend(selector(i))
 
-rw = table_body.find("tr",first=True).text
 table_body = str(table_body.text)
 line = table_body.split(sep="\n")
-#print(type(line))
-
-#rw = str(rw)
-#print(f"Rw is: {type(rw)}")
-
-#list_rows = rw.split(sep="\n")
-#print(f"ListRows is: {type(list_rows)}")
-
-#tabletxt = table_body
-#print(f"Tabletxt is: {type(tabletxt)}")
-#print(tabletxt)
-
-#print(type(list_rows))
-#print(list_rows)
-
-#tp = tabletxt.splitlines()
-#print(len(tp))
 
 def list_split(listA, n):
 	for x in range(0, len(listA)):
@@ -73,32 +58,7 @@ def list_split(listA, n):
 		yield every_chunk
 	print(new_table)
 
-#list(list_split(tp,23))
-
-#header = ["Nombre", "Veliz", "Saldo"]
-#data = ["Nora", "1033094", "$0"] needed headers for new table
-
-#print(tp)
-
 
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
-	csvwriter.writerows(master2)
-
-
-
-#x=0
-#y= tp.index("D")
-#
-#for item in range(x:y):
-#	csvwriter.writerows(item)
-
-
-#for i in data:
-#	count +=1
-#	if i == "I":
-#		print(data[count:count+10])
-#		print(html.text[count])
-
-
-#takes data from html local file, grabs text from it, 
+	csvwriter.writerows(animadoras)
