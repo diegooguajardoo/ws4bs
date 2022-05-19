@@ -25,9 +25,24 @@ header.append(table_heads)
 table_body = report.find("tbody", first=True)
 table_data = table_body.find("td")
 
+#counter
+directas = 0
+indirectas = 0
+total = 0
+
+for i in range(0,len(table_data)):
+	table_data1 = (table_data[i].text)
+	if table_data1 == "I":
+		indirectas = indirectas + 1
+		total = total + 1
+	elif table_data1 == "D":
+		directas = directas + 1
+		total = total + 1
+print(f"Directas {directas} e indirectas {indirectas} total {total}")
+
 animadoras = []
 count = 0
-for e in range(1,3):
+for e in range(1,(total+1)):
 	animadora = []
 	for i in range(0,25):
 		cell = table_data[count+i].text
