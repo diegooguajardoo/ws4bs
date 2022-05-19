@@ -9,11 +9,8 @@ with open ("JAFRAnet.html", errors="ignore") as html_file:
 	html.render()
 
 report = html.find(".table-blk#reporte", first=True)
-table_body = report.find("tbody", first= True)
-table_data = table_body.find("td")
-#initial = table_data[0].text
 
-
+#headers
 table_head = report.find(".head")
 header =[]
 table_heads = []
@@ -22,10 +19,11 @@ for i in range(0,2):
 	title = str(title)
 	title=title.splitlines()
 	table_heads.append(title)
-#header = table_heads.splitlines(sep="\n")
-print(table_heads)
 header.append(table_heads)
 
+#data
+table_body = report.find("tbody", first=True)
+table_data = table_body.find("td")
 
 animadoras = []
 count = 0
@@ -33,7 +31,7 @@ for e in range(1,3):
 	animadora = []
 	for i in range(0,25):
 		cell = table_data[count+i].text
-		animadora.append(cell)   ##revisar esta secuencia
+		animadora.append(cell)
 	count = count + i
 	animadoras.append(animadora)
 
@@ -63,7 +61,7 @@ def list_split(listA, n):
 			loc = listA.index("D")
 		elif x == "I":
 			loc = listA.index("I")
-		every_chunk = listA[loc+1: loc+n]   #chunks are additive and need to be divided into chunks when "D" condition is met.
+		every_chunk = listA[loc+1: loc+n]
 		new_table = new_table.append(every_chunk)
 		
 		if len(every_chunk) < n:
@@ -75,6 +73,6 @@ def list_split(listA, n):
 
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
-	csvwriter.writerows(table_heads)
+#	csvwriter.writerows(table_heads)
 #	csvwriter.writerows(header)
 	csvwriter.writerows(animadoras)
