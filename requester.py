@@ -11,24 +11,31 @@ with open ("JAFRAnet.html", errors="ignore") as html_file:
 report = html.find(".table-blk#reporte", first=True)
 table_body = report.find("tbody", first= True)
 table_data = table_body.find("td")
-initial = table_data[0].text
+#initial = table_data[0].text
 
 
-table_head = report.find("th")
-table_head = table_head[0].text
-header = table_head.split(sep="\n")
+table_head = report.find(".head")
+header =[]
+table_heads = []
+for i in range(0,2):
+	title = table_head[i].text
+	title = str(title)
+	title=title.splitlines()
+	table_heads.append(title)
+#header = table_heads.splitlines(sep="\n")
+print(table_heads)
+header.append(table_heads)
 
 
 animadoras = []
 count = 0
-for e in range(1,6):
+for e in range(1,3):
 	animadora = []
 	for i in range(0,25):
 		cell = table_data[count+i].text
 		animadora.append(cell)   ##revisar esta secuencia
 	count = count + i
 	animadoras.append(animadora)
-print(animadoras)
 
 def looker(pt,elem):
 	resultsofsearch = table_body.find(elem)
@@ -68,5 +75,6 @@ def list_split(listA, n):
 
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
-	csvwriter.writerows(header)
+	csvwriter.writerows(table_heads)
+#	csvwriter.writerows(header)
 	csvwriter.writerows(animadoras)
