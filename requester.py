@@ -3,88 +3,62 @@ from sqlite3 import Row
 from requests_html import HTML
 import csv
 
-with open ("JAFRAnet.html", errors="ignore") as html_file:
-	source = html_file.read()
-	html = HTML(html=source)
-	html.render()
+#with open ("JAFRAnet.html", errors="ignore") as html_file1:
+#	source = html_file1.read()
+#	html = HTML(html=source)
+#	html.render()
+#
 
-report = html.find(".table-blk#reporte", first=True)
+def scrape():
+	with open("JAFRAnet.html", errors="ignore") as html_file:
+		source = html_file.read()
+		html = HTML(html=source)
+		html.render()
+	
+	report = html.find(".table-blk#reporte", first=True)
+	
+	#headers
+	table_head = report.find(".head")
+	header =[]
+	table_heads = []
+	for i in range(0,2):
+		title = table_head[i].text
+		title = str(title)
+		title=title.splitlines()
+		table_heads.append(title)
+	header.append(table_heads)
+	
+	#data
+	table_body = report.find("tbody", first=True)
+	table_data = table_body.find("td")
+	
+	#counter
+	directas = 0
+	indirectas = 0
+	total = 0
+	
+	for i in range(0,len(table_data)):
+		table_data1 = (table_data[i].text)
+		if table_data1 == "I":
+			indirectas = indirectas + 1
+			total = total + 1
+		elif table_data1 == "D":
+			directas = directas + 1
+			total = total + 1
+	print(f"Directas {directas} e indirectas {indirectas} total {total}")
+	
+	animadoras = []
+	count = 0
+	for e in range(1,(total+1)):
+		animadora = []
+		for i in range(0,25):
+			cell = table_data[count+i].text
+			animadora.append(cell)
+		count = count + i
+		animadoras.append(animadora)
+	return animadoras
 
-#headers
-table_head = report.find(".head")
-header =[]
-table_heads = []
-for i in range(0,2):
-	title = table_head[i].text
-	title = str(title)
-	title=title.splitlines()
-	table_heads.append(title)
-header.append(table_heads)
-
-#data
-table_body = report.find("tbody", first=True)
-table_data = table_body.find("td")
-
-#counter
-directas = 0
-indirectas = 0
-total = 0
-
-for i in range(0,len(table_data)):
-	table_data1 = (table_data[i].text)
-	if table_data1 == "I":
-		indirectas = indirectas + 1
-		total = total + 1
-	elif table_data1 == "D":
-		directas = directas + 1
-		total = total + 1
-print(f"Directas {directas} e indirectas {indirectas} total {total}")
-
-animadoras = []
-count = 0
-for e in range(1,(total+1)):
-	animadora = []
-	for i in range(0,25):
-		cell = table_data[count+i].text
-		animadora.append(cell)
-	count = count + i
-	animadoras.append(animadora)
-
-def looker(pt,elem):
-	resultsofsearch = table_body.find(elem)
-	rst = (resultsofsearch[pt].text)
-	tbl = rst.splitlines()
-	return tbl
-
-def selector(n):
-	master = []
-	for i in range(n*3-3,n*3-1):
-		master.append(looker(i,elem="tr"))
-	return master
-
-master2 = []
-rw = table_body.find("tr",first=True).text
-for i in range(1,int((len(rw)/2))-5):
-	master2.extend(selector(i))
-
-table_body = str(table_body.text)
-line = table_body.split(sep="\n")
-
-def list_split(listA, n):
-	for x in range(0, len(listA)):
-		if x == "D":
-			loc = listA.index("D")
-		elif x == "I":
-			loc = listA.index("I")
-		every_chunk = listA[loc+1: loc+n]
-		new_table = new_table.append(every_chunk)
-		
-		if len(every_chunk) < n:
-			every_chunk = every_chunk + \
-			[None for y in range(n-len(every_chunk))]
-		yield every_chunk
-	print(new_table)
-
+animadoras = scrape()
 
 with open('jafra.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)

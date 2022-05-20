@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm -->
+<html lang="es"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JAFRAnet</title>
+
+  <link rel="shortcut icon" type="image/x-icon" media="all" href="https://jafranet.com.mx/MxWebJnt/MxJntV6/Images/favicon.ico">
+  <link href="./JAFRAnet2_files/bootstrap.min.css" rel="stylesheet">                                   <!-- Bootstrap -->
+  <link href="./JAFRAnet2_files/JntFontAwesome.css" rel="stylesheet">                                  <!-- Font Awesome -->
+  <link href="./JAFRAnet2_files/font-awesome.min.css" rel="stylesheet">                                <!-- Font Awesome -->
+  <link rel="stylesheet" href="./JAFRAnet2_files/flexslider.css" type="text/css" media="screen">     <!--Flex Slider Styles-->
+  <link href="./JAFRAnet2_files/JntStyle.css" rel="stylesheet">                                        <!-- Theme CSS -->
+
+  <link href="./JAFRAnet2_files/jquery.mobile-menu.css" rel="stylesheet">                              <!-- MOBILE MENU CSS -->
+
+  <!-- Data Tables CSS -->
+  <link href="./JAFRAnet2_files/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="./JAFRAnet2_files/responsive.dataTables.min.css" rel="stylesheet">
+  <link href="./JAFRAnet2_files/buttons.dataTables.min.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script async="" src="./JAFRAnet2_files/analytics.js"></script><script src="./JAFRAnet2_files/jquery.min.js"></script>
+  <script src="./JAFRAnet2_files/Chart.min.js"></script>
+  <script src="./JAFRAnet2_files/utils.js"></script>
+  <script src="./JAFRAnet2_files/JntMain.js"></script>
+  <script src="./JAFRAnet2_files/JntHeader.js"></script>
+  <script src="./JAFRAnet2_files/JntHome.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+  <script language="JavaScript" type="text/javascript">
+    var TheCookieName = 'CKModLadyV6';
+    TheCookieValue    = GetCookie(TheCookieName);
+
+    $(document).ready(function(){
+      // forza login cuando ya no existen cookies
+      if ( TheCookieValue  == null  ||  TheCookieValue  == "*" ) { cerrarW(); return false;}  // Ejecuta login
+      fnFormatMenus();           // Construye Menus
+      fnCrtfrmNotif();           // crea datos de notificaciones y mensajes
+
+      $("#CopyRight").html(parseCookie(GetCookie(TheCookieName),14));
+    });
+
+    $( window ).load(function() {
+    });
+  </script>
+<style type="text/css">.js-slide-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}</style><style type="text/css">.js-slide-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}</style><style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style></head>
+
+<body>
+  <div id="overlay"></div>
+  <a id="anLnkMsg" href="javascript:void(0);" class="linkgrey" data-toggle="modal" data-target="#msgWindow"></a>
+  <!-------------------------------------------------------------------------------------------->
+  <!-- MOBILE MENU -->
+  <!-------------------------------------------------------------------------------------------->
+  <div id="mobile-menu" style="left: -250px; width: 250px;">
+    <div class="mob-top">
+      <span><a href="javaScript:excPgm(&#39;JntMyAcInf&#39;,&#39;JntMyAcInf&#39;,&#39;&#39;,&#39;&#39;);">Mi Cuenta</a></span>
+      <span>
+        <a href="javascript:fnDspNotAtt(&#39;M&#39;);">
+          <i class="fa fa-bell"></i>
+        </a>
+      </span>
+      <span style="display:none"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#"><i class="fa fa-shopping-cart"></i>0</a></span>
+      <span class="search">
+        <a href="javaScript:excPgm(&#39;JntSearch&#39;,&#39;JntSearch&#39;,&#39;&#39;,&#39;&#39;);">
+          <i class="fa fa-search"></i>
+        </a>
+      </span>
+    </div>
+    <div class="sidenav"><div class="mitem mobmenu"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Estado de Cuenta</a><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Grupo Personal</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTDCXVEL&#39;,&#39;Jntdcxvel&#39;,&#39;&#39;,&#39;&#39;);">Personal por número de veliz</a></li><li><a href="javaScript:excPgm(&#39;JNTDCXANI&#39;,&#39;Jntdcxani&#39;,&#39;&#39;,&#39;&#39;);">Actualizado por animador</a></li><li><a href="javaScript:excPgm(&#39;JNTDCGCON&#39;,&#39;Jntdcgcon&#39;,&#39;&#39;,&#39;&#39;);">Grupo Personal</a></li><li><a href="javaScript:excPgm(&#39;JNTEDCOSPE&#39;,&#39;Jntedcospe&#39;,&#39;&#39;,&#39;&#39;);">Consultores sin colocar pedido + 2 meses</a></li><li><a href="javaScript:excPgm(&#39;JNTCARCOB&#39;,&#39;JntCarCob&#39;,&#39;&#39;,&#39;&#39;);">Cartas de Cobranza</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Listado de Reactivación/Retención</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTDCLIRE&#39;,&#39;Jntdclire&#39;,&#39;&#39;,&#39;&#39;);">Listado de Reactivación Mayo 2022</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Búsquedas</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTRHVEL&#39;,&#39;Jntrhvel&#39;,&#39;&#39;,&#39;&#39;);">Búsqueda por Nombre</a></li><li><a href="javaScript:excPgm(&#39;JNTGFACT&#39;,&#39;Jntgfact&#39;,&#39;&#39;,&#39;&#39;);">Factura electrónica o Carta de no adeudo</a></li></ul></li></ul></div></div><div class="mitem mobmenu"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Promociones</a><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Premios</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTROPRSO&#39;,&#39;Jntroprso&#39;,&#39;&#39;,&#39;&#39;);">Premios Solicitados y Especiales</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Club VIP</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTPRCVIP&#39;,&#39;JntPrCVip&#39;,&#39;&#39;,&#39;&#39;);">Club VIP</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Simulador</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTPRSIPCP&#39;,&#39;Jntprsipcp&#39;,&#39;&#39;,&#39;&#39;);">Puntos por Compra Personal</a></li><li><a href="javaScript:excPgm(&#39;JNTPRSIPPA&#39;,&#39;Jntprsippa&#39;,&#39;&#39;,&#39;&#39;);">Puntos por Patrocinio</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Puntos Estado de Cuenta</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTRPTXVE&#39;,&#39;Jntrptxve&#39;,&#39;&#39;,&#39;&#39;);">Personal por No. de Veliz</a></li><li><a href="javaScript:excPgm(&#39;JNTRPTXAN&#39;,&#39;Jntrptxan&#39;,&#39;&#39;,&#39;&#39;);">Actualizado por Animador</a></li></ul></li></ul></div></div><div class="mitem mobmenu"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Linaje y Mediación Mercantil</a><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Mediación Mercantil</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTMSTMED&#39;,&#39;Jntmstmed&#39;,&#39;&#39;,&#39;&#39;);">Status de Mediación Mercantil</a></li><li><a href="javaScript:excPgm(&#39;JNTMMEME1&#39;,&#39;Jntmmeme1&#39;,&#39;&#39;,&#39;&#39;);">Resumen de Mediación Mercantil</a></li><li><a href="javaScript:excPgm(&#39;JNTLMMOACA&#39;,&#39;Jntlmmoac5&#39;,&#39;&#39;,&#39;&#39;);">Módulos Acumulados</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Facturas Fiscales</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTMFAME1&#39;,&#39;Jntmfame1&#39;,&#39;&#39;,&#39;&#39;);">Facturas Fiscales</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Linaje</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTLMLINLI&#39;,&#39;Jntlmlinli&#39;,&#39;&#39;,&#39;&#39;);">Linaje en Línea</a></li><li><a href="javaScript:excPgm(&#39;JNTTRAYLIN&#39;,&#39;JntTrayLin&#39;,&#39;&#39;,&#39;&#39;);">Historia de Linaje</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Patrocinios</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTMPATRO&#39;,&#39;Jntmpatro&#39;,&#39;&#39;,&#39;&#39;);">Detalle de patrocinios</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Promociones de Linaje</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTCONEX&#39;,&#39;Jntconex&#39;,&#39;&#39;,&#39;&#39;);">Consultor de Éxito</a></li><li><a href="javaScript:excPgm(&#39;JNTCONECA&#39;,&#39;Jntconeca&#39;,&#39;&#39;,&#39;&#39;);">Calificación de Éxito</a></li><li><a href="javaScript:excPgm(&#39;JNTCONEAE&#39;,&#39;Jntconeae&#39;,&#39;&#39;,&#39;&#39;);">Animador de Éxito</a></li><li><a href="javaScript:excPgm(&#39;JNTCONEGP&#39;,&#39;Jntconegp&#39;,&#39;&#39;,&#39;&#39;);">Grupo Personal Exitoso</a></li><li><a href="javaScript:excPgm(&#39;JNTCONEPG&#39;,&#39;Jntconepg&#39;,&#39;&#39;,&#39;&#39;);">Promueve y Gana</a></li><li><a href="javaScript:excPgm(&#39;JNTMCALIF&#39;,&#39;JntmCalif&#39;,&#39;&#39;,&#39;&#39;);">Calificaciones</a></li><li><a href="javaScript:excPgm(&#39;JNTPRVEEXI&#39;,&#39;Jntprveexi&#39;,&#39;&#39;,&#39;&#39;);">Velocidad del Éxito (Permanencia)</a></li></ul></li></ul></div></div><div class="mitem mobmenu"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Consultas Generales</a><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Documentos a Entregar</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTCGDOCPE&#39;,&#39;Jntcgdocpe&#39;,&#39;&#39;,&#39;&#39;);">Patrocinios con Documentos Pendientes</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Descargables</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTDWNDOCB&#39;,&#39;JntDwnDocB&#39;,&#39;&#39;,&#39;&#39;);">Folletería del Mes</a></li><li><a href="javaScript:excPgm(&#39;JNTDWNDOCP&#39;,&#39;JntDwnDocP&#39;,&#39;&#39;,&#39;&#39;);">Aviso de Productos</a></li><li><a href="javaScript:excPgm(&#39;JNTDWNDOCG&#39;,&#39;JntDwnDocG&#39;,&#39;&#39;,&#39;&#39;);">Avisos Generales</a></li><li><a href="javaScript:excPgm(&#39;JNTDWNDOCF&#39;,&#39;JntDwnDocF&#39;,&#39;&#39;,&#39;&#39;);">Formatos</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Otros</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTPROGRUT&#39;,&#39;JntProgRut&#39;,&#39;&#39;,&#39;&#39;);">Programa de Rutas</a></li><li><a href="javaScript:excPgm(&#39;JNTCONSCO&#39;,&#39;JntConsCo&#39;,&#39;&#39;,&#39;&#39;);">Cobertura de Reparto</a></li></ul></li></ul></div></div><div class="mitem mobmenu"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Capturas</a><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Pedidos</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTPFI0&#39;,&#39;JntPFI0&#39;,&#39;&#39;,&#39;&#39;);">Pedido Inteligente</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Patrocinios</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTNINORE&#39;,&#39;JntNINoRe&#39;,&#39;&#39;,&#39;&#39;);">Nuevo Patrocinio</a></li><li><a href="javaScript:excPgm(&#39;JNTPAGNI&#39;,&#39;JntPagNI&#39;,&#39;&#39;,&#39;&#39;);">Registro de Pago de Nuevo Patrocinio</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Programa</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTCARDA&#39;,&#39;JntCarDa&#39;,&#39;&#39;,&#39;&#39;);">Activación de Tarjetas Promocionales</a></li><li><a href="javaScript:excPgm(&#39;JNTCAPUN&#39;,&#39;JntCaPun&#39;,&#39;&#39;,&#39;&#39;);">Puntos</a></li><li><a href="javaScript:excPgm(&#39;JNTCAPCA&#39;,&#39;JntCapCa&#39;,&#39;&#39;,&#39;&#39;);">Calificaciones</a></li></ul></li></ul></div><div class="subitem" style="display:none;"><ul class="mobile-menu"><li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" style="padding-right:55px;">Suscripciones</a><ul style="display:none"><li><a href="javaScript:excPgm(&#39;JNTSUSCR&#39;,&#39;JntSuscr&#39;,&#39;&#39;,&#39;&#39;);">Folletería y Lanzamientos</a></li></ul></li></ul></div></div></div>
+    <div class="mob-bottom">
+      <ul class="list-unstyled mobile-menu">
+        <li><a href="JavaScript:deleteCookie(&#39;CKModLadyV6&#39;);cerrarW();">Cerrar Sesión</a></li>
+      <li style="height: 0px;"></li></ul>
+    </div>
+  </div>
+
+  <!-------------------------------------------------------------------------------------------->
+  <!-------------------------------------------------------------------------------------------->
+  <div id="page">
+    <!-- MOBILE MENU BUTTON -->
+    <button type="button" class="mm-toggle is-closed animated fadeInLeft" data-toggle="offcanvas">
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
+
+    <!-- Start Header -->
+    <header id="header">
+      <div class="header-top">
+        <div class="container">
+          <div class="logo text-center">
+              <a href="javaScript:excPgm(&#39;jnthome&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);">
+                <span><img class="img" src="./JAFRAnet2_files/JNet_Logo_Header.png" alt="jafra"></span>
+              </a>
+          </div>
+          <div class="head-info row hidden-xs">
+            <div class="col-xs-6">
+              <div class="consultant">
+                <div id="dvIconSex">
+                  <script>
+                    if (parseCookie(GetCookie(TheCookieName),07) == 'F') {
+                       document.write('<img src="/MxWebJnt/MxJntV6/Images/JNet_Avatar_Woman.svg" alt="">'); }
+                    else { document.write('<img src="/MxWebJnt/MxJntV6/Images/JNet_Avatar_Man.svg" alt="">'); }
+                  </script><img src="./JAFRAnet2_files/JNet_Avatar_Woman.svg" alt="">
+                </div>
+                <div class="info-box">
+                  <span class="name">
+                    <script>
+                      document.write(parseCookie(GetCookie(TheCookieName),05)  + '-' +
+                                     parseCookie(GetCookie(TheCookieName),08));
+                    </script>1033094-NORA ALICIA GOMEZ SALDA#A
+                  </span>
+                  <span class="title"><script>document.write(parseCookie(GetCookie(TheCookieName),09));</script>LADY GRAND MASTER</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="top-menu">
+                <ul class="nav navbar-nav pull-right">
+                  <li><a href="javascript:deleteCookie(&#39;CKModLadyV6&#39;);cerrarW();">Cerrar Sesión</a></li>
+                  <li><a href="javaScript:excPgm(&#39;JntMyAcInf&#39;,&#39;JntMyAcInf&#39;,&#39;&#39;,&#39;&#39;);">Mi Cuenta</a></li>
+                  <li class="cart" style="display:none"><a href="javascript:void(0)" type="button"><i class="fa fa-info-circle"></i><span class="label label-info">0</span></a></li>
+                  <li class="notificaciones">
+               <!-- <a onClick="frmNotMsg.NMsgLastD.value = 0; fnDspNotMsg();"    id="btNotMsg" href="#"  -->
+                    <a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" onclick="fnDspNotMsg();" id="btNotMsg" type="button" data-toggle="modal" data-target="#notificaciones" style="text-decoration:none">
+                      <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                      <span id="spCountMsg" class="label label-info">0</span>
+                    </a>
+                  </li>
+               <!-- <a href="javascript:void(0)" data-toggle="modal" data-target="#forget-password">¿Olvidaste tu NIJ?</a> -->
+                  <li class="open-close notification">
+                    <a href="javascript:void(0);" class="opener" style="text-decoration:none">
+                      <i onclick="javascript:fnDspNotAtt(&#39;P&#39;);" class="fa fa-bell"></i>
+                      <span onclick="javascript:fnDspNotAtt(&#39;P&#39;);" id="spCountAtt" class="label label-info">0</span>
+                    </a>
+                    <div id="dvNotAtt" class="slide notification-box js-slide-hidden" style="display:none;"></div>
+                  </li>
+                  <li class="cart" style="display:none"><a href="javascript:void(0)"><i class="fa fa-shopping-cart"></i> (0)</a></li>
+                  <li class="open-close search">
+                    <a href="javaScript:excPgm(&#39;JntSearch&#39;,&#39;JntSearch&#39;,&#39;&#39;,&#39;&#39;);"><i class="fa fa-search"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Header Top-->
+      <div class="header-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <ul class="add-nav">
+                <li><a href="javaScript:excPgm(&#39;JntContSer&#39;,&#39;JntContSer&#39;,&#39;&#39;,&#39;&#39;);">Contáctanos</a></li>
+                <li><a href="javascript:fnJMia(&#39;CKModLadyV6&#39;);">JAFRAmía</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-right">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Nav -->
+    <nav id="nav" class="navbar">
+      <div class="container">
+        <div class="menu hidden-xs">
+          <ul id="ulMenus" class="nav"><li class="nav-dinam"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Estado de Cuenta</a><div class="sub-nav mf2"><div class="nav-wrap"><div class="submenu col-md-12"><div class="col-md-6"><div class="item"><label class="subCatgory">Grupo Personal</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTDCXVEL&#39;,&#39;Jntdcxvel&#39;,&#39;&#39;,&#39;&#39;);">Personal por número de veliz</a></li><li><a href="javaScript:excPgm(&#39;JNTDCXANI&#39;,&#39;Jntdcxani&#39;,&#39;&#39;,&#39;&#39;);">Actualizado por animador</a></li><li><a href="javaScript:excPgm(&#39;JNTDCGCON&#39;,&#39;Jntdcgcon&#39;,&#39;&#39;,&#39;&#39;);">Grupo Personal</a></li><li><a href="javaScript:excPgm(&#39;JNTEDCOSPE&#39;,&#39;Jntedcospe&#39;,&#39;&#39;,&#39;&#39;);">Consultores sin colocar pedido + 2 meses</a></li><li><a href="javaScript:excPgm(&#39;JNTCARCOB&#39;,&#39;JntCarCob&#39;,&#39;&#39;,&#39;&#39;);">Cartas de Cobranza</a></li></ul><label class="subCatgory">Listado de Reactivación/Retención</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTDCLIRE&#39;,&#39;Jntdclire&#39;,&#39;&#39;,&#39;&#39;);">Listado de Reactivación Mayo 2022</a></li></ul></div></div><div class="col-md-6"><div class="item"><label class="subCatgory">Búsquedas</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTRHVEL&#39;,&#39;Jntrhvel&#39;,&#39;&#39;,&#39;&#39;);">Búsqueda por Nombre</a></li><li><a href="javaScript:excPgm(&#39;JNTGFACT&#39;,&#39;Jntgfact&#39;,&#39;&#39;,&#39;&#39;);">Factura electrónica o Carta de no adeudo</a></li></ul></div></div></div></div><div class="sub-nav-footer"><span>Estado de Cuenta</span></div></div></li><li class="nav-dinam"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Promociones</a><div class="sub-nav mf2"><div class="nav-wrap"><div class="submenu col-md-12"><div class="col-md-6"><div class="item"><label class="subCatgory">Premios</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTROPRSO&#39;,&#39;Jntroprso&#39;,&#39;&#39;,&#39;&#39;);">Premios Solicitados y Especiales</a></li></ul><label class="subCatgory">Club VIP</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTPRCVIP&#39;,&#39;JntPrCVip&#39;,&#39;&#39;,&#39;&#39;);">Club VIP</a></li></ul><label class="subCatgory">Simulador</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTPRSIPCP&#39;,&#39;Jntprsipcp&#39;,&#39;&#39;,&#39;&#39;);">Puntos por Compra Personal</a></li><li><a href="javaScript:excPgm(&#39;JNTPRSIPPA&#39;,&#39;Jntprsippa&#39;,&#39;&#39;,&#39;&#39;);">Puntos por Patrocinio</a></li></ul></div></div><div class="col-md-6"><div class="item"><label class="subCatgory">Puntos Estado de Cuenta</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTRPTXVE&#39;,&#39;Jntrptxve&#39;,&#39;&#39;,&#39;&#39;);">Personal por No. de Veliz</a></li><li><a href="javaScript:excPgm(&#39;JNTRPTXAN&#39;,&#39;Jntrptxan&#39;,&#39;&#39;,&#39;&#39;);">Actualizado por Animador</a></li></ul></div></div></div></div><div class="sub-nav-footer"><span>Promociones</span></div></div></li><li class="nav-dinam"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Linaje y Mediación Mercantil</a><div class="sub-nav mf2"><div class="nav-wrap"><div class="submenu col-md-12"><div class="col-md-6"><div class="item"><label class="subCatgory">Mediación Mercantil</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTMSTMED&#39;,&#39;Jntmstmed&#39;,&#39;&#39;,&#39;&#39;);">Status de Mediación Mercantil</a></li><li><a href="javaScript:excPgm(&#39;JNTMMEME1&#39;,&#39;Jntmmeme1&#39;,&#39;&#39;,&#39;&#39;);">Resumen de Mediación Mercantil</a></li><li><a href="javaScript:excPgm(&#39;JNTLMMOACA&#39;,&#39;Jntlmmoac5&#39;,&#39;&#39;,&#39;&#39;);">Módulos Acumulados</a></li></ul><label class="subCatgory">Facturas Fiscales</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTMFAME1&#39;,&#39;Jntmfame1&#39;,&#39;&#39;,&#39;&#39;);">Facturas Fiscales</a></li></ul><label class="subCatgory">Linaje</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTLMLINLI&#39;,&#39;Jntlmlinli&#39;,&#39;&#39;,&#39;&#39;);">Linaje en Línea</a></li><li><a href="javaScript:excPgm(&#39;JNTTRAYLIN&#39;,&#39;JntTrayLin&#39;,&#39;&#39;,&#39;&#39;);">Historia de Linaje</a></li></ul><label class="subCatgory">Patrocinios</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTMPATRO&#39;,&#39;Jntmpatro&#39;,&#39;&#39;,&#39;&#39;);">Detalle de patrocinios</a></li></ul></div></div><div class="col-md-6"><div class="item"><label class="subCatgory">Promociones de Linaje</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTCONEX&#39;,&#39;Jntconex&#39;,&#39;&#39;,&#39;&#39;);">Consultor de Éxito</a></li><li><a href="javaScript:excPgm(&#39;JNTCONECA&#39;,&#39;Jntconeca&#39;,&#39;&#39;,&#39;&#39;);">Calificación de Éxito</a></li><li><a href="javaScript:excPgm(&#39;JNTCONEAE&#39;,&#39;Jntconeae&#39;,&#39;&#39;,&#39;&#39;);">Animador de Éxito</a></li><li><a href="javaScript:excPgm(&#39;JNTCONEGP&#39;,&#39;Jntconegp&#39;,&#39;&#39;,&#39;&#39;);">Grupo Personal Exitoso</a></li><li><a href="javaScript:excPgm(&#39;JNTCONEPG&#39;,&#39;Jntconepg&#39;,&#39;&#39;,&#39;&#39;);">Promueve y Gana</a></li><li><a href="javaScript:excPgm(&#39;JNTMCALIF&#39;,&#39;JntmCalif&#39;,&#39;&#39;,&#39;&#39;);">Calificaciones</a></li><li><a href="javaScript:excPgm(&#39;JNTPRVEEXI&#39;,&#39;Jntprveexi&#39;,&#39;&#39;,&#39;&#39;);">Velocidad del Éxito (Permanencia)</a></li></ul></div></div></div></div><div class="sub-nav-footer"><span>Linaje y Mediación Mercantil</span></div></div></li><li class="nav-dinam"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Consultas Generales</a><div class="sub-nav mf2"><div class="nav-wrap"><div class="submenu col-md-12"><div class="col-md-6"><div class="item"><label class="subCatgory">Documentos a Entregar</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTCGDOCPE&#39;,&#39;Jntcgdocpe&#39;,&#39;&#39;,&#39;&#39;);">Patrocinios con Documentos Pendientes</a></li></ul><label class="subCatgory">Descargables</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTDWNDOCB&#39;,&#39;JntDwnDocB&#39;,&#39;&#39;,&#39;&#39;);">Folletería del Mes</a></li><li><a href="javaScript:excPgm(&#39;JNTDWNDOCP&#39;,&#39;JntDwnDocP&#39;,&#39;&#39;,&#39;&#39;);">Aviso de Productos</a></li><li><a href="javaScript:excPgm(&#39;JNTDWNDOCG&#39;,&#39;JntDwnDocG&#39;,&#39;&#39;,&#39;&#39;);">Avisos Generales</a></li><li><a href="javaScript:excPgm(&#39;JNTDWNDOCF&#39;,&#39;JntDwnDocF&#39;,&#39;&#39;,&#39;&#39;);">Formatos</a></li></ul></div></div><div class="col-md-6"><div class="item"><label class="subCatgory">Otros</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTPROGRUT&#39;,&#39;JntProgRut&#39;,&#39;&#39;,&#39;&#39;);">Programa de Rutas</a></li><li><a href="javaScript:excPgm(&#39;JNTCONSCO&#39;,&#39;JntConsCo&#39;,&#39;&#39;,&#39;&#39;);">Cobertura de Reparto</a></li></ul></div></div></div></div><div class="sub-nav-footer"><span>Consultas Generales</span></div></div></li><li class="nav-dinam"><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">Capturas</a><div class="sub-nav mf2"><div class="nav-wrap"><div class="submenu col-md-12"><div class="col-md-6"><div class="item"><label class="subCatgory">Pedidos</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTPFI0&#39;,&#39;JntPFI0&#39;,&#39;&#39;,&#39;&#39;);">Pedido Inteligente</a></li></ul><label class="subCatgory">Patrocinios</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTNINORE&#39;,&#39;JntNINoRe&#39;,&#39;&#39;,&#39;&#39;);">Nuevo Patrocinio</a></li><li><a href="javaScript:excPgm(&#39;JNTPAGNI&#39;,&#39;JntPagNI&#39;,&#39;&#39;,&#39;&#39;);">Registro de Pago de Nuevo Patrocinio</a></li></ul></div></div><div class="col-md-6"><div class="item"><label class="subCatgory">Programa</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTCARDA&#39;,&#39;JntCarDa&#39;,&#39;&#39;,&#39;&#39;);">Activación de Tarjetas Promocionales</a></li><li><a href="javaScript:excPgm(&#39;JNTCAPUN&#39;,&#39;JntCaPun&#39;,&#39;&#39;,&#39;&#39;);">Puntos</a></li><li><a href="javaScript:excPgm(&#39;JNTCAPCA&#39;,&#39;JntCapCa&#39;,&#39;&#39;,&#39;&#39;);">Calificaciones</a></li></ul><label class="subCatgory">Suscripciones</label><ul class="list-unstyled"><li><a href="javaScript:excPgm(&#39;JNTSUSCR&#39;,&#39;JntSuscr&#39;,&#39;&#39;,&#39;&#39;);">Folletería y Lanzamientos</a></li></ul></div></div></div></div><div class="sub-nav-footer"><span>Capturas</span></div></div></li></ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav -->
+
+    <!--Promobar-->
+    <div class="promo-bar" style="display:none">
+      <div class="container">
+        <p><em>Obtén la mejor oferta de nuestra línea legendaria Royal Jelly para el Cuidado de la Piel. No te la pierdas. <a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#">¡Es una oferta por tiempo limitado]</a></em></p>
+      </div>
+    </div>
+
+    <!-- Start Content Area -->
+    <main id="main">
+
+<script src="./JAFRAnet2_files/jquery.min.js"></script>
+<script src="./JAFRAnet2_files/bootstrap.min.js"></script>
+<script src="./JAFRAnet2_files/jquery.main.js"></script>
+<script src="./JAFRAnet2_files/jquery.mobile-menu.min.js"></script>
+<script src="./JAFRAnet2_files/jquery.dataTables.min.js"></script>
+<link href="./JAFRAnet2_files/jquery.dataTables.min.css" rel="stylesheet">
+<link href="./JAFRAnet2_files/responsive.dataTables.min.css" rel="stylesheet">
+<!-- Scripts -->
+<script languaje="JavaScript">
+
+ $(document).ready(function(){               // Colorea renglones de detalle
+   $(".000").css({color: "#009933"});        // Credito correcto        Verde
+   $(".031").css({color: "#D0821C"});        // Clave en Recuperacion   Naranja
+   $(".061").css({color: "#D0821C"});        // Clave en Recuperacion   Naranja
+   $(".091").css({color: "#D0821C"});        // Clave en Recuperacion   Naranja
+   $(".018").css({color: "#FF0000"});        // Clave Vencida           Rojo
+   $(".030").css({color: "#FF0000"});        // Clave Vencida           Rojo
+   $(".060").css({color: "#FF0000"});        // Clave Vencida           Rojo
+   $(".090").css({color: "#FF0000"});        // Clave Vencida           Rojo
+ });
+
+function ExcEdoCta(veliz) {
+  FrmEdoCta.vel_h.value = veliz;
+  excPgm('JNTDCXVEL','JNTDCXVEL','FrmEdoCta','','_self');
+}
+
+function ExcClbVip(veVip) {
+  FrmEdoCta.vel_h.value = veVip;
+  excPgm('JNTPRCVIP','JNTPRCVIP','FrmEdoCta','','_self');
+}
+
+function ExcPatroc(vePat) {
+  FrmEdoCta.vel_h.value = vePat;
+  excPgm('JNTMPATRO','JNTMPATRO','FrmEdoCta','','_self');
+}
+
+function ExcQry(){
+  FrmMain.fil_h.value   = $('#fil_h').val();
+  FrmMain.vel_h.value   = $('#vel_h').val();
+  FrmMain.spdst_h.value = $('#spdst_h').val();
+  FrmMain.sprqt_h.value = $('#sprqt_h').val();
+  FrmMain.ccpco_h.value = $('#ccpco_h').val();
+  FrmMain.tv18_h.value  = $('#tv18_h').val();
+  FrmMain.srind_h.value = $('#srind_h').val();
+  FrmMain.cconu_h.value = $('#cconu_h').val();
+  FrmMain.gener_h.value = $('#gener_h').val();
+  FrmMain.vip_h.value   = $('#vip_h').val();
+  FrmMain.cvcre_h.value  = $('#cvcre_h').val();
+  excPgm('JNTDCXANI','JNTDCXANI','FrmMain','','_self');
+}
+
+ // Ejecución inicial
+ $(document).ready(function() {
+   if (undefined !== $("#MsgError").val() && $("#MsgError").val().length !== 0){
+     $("#spnNumVel").html($("#MsgError").val());
+     $("#cconu_h").siblings(".help-block").show();
+     $("#cconu_h").parent().addClass("has-error");
+   }
+ });
+
+ // Valida formulario
+ $(document).on('click', '.ConActAni', function(){
+  var id = "#"+$(this).parent().attr('id');
+  var input = id + " input[type=text] ";
+  var flgError = false;
+
+  // Valida campos obligatorios
+  $(input).each(function(index){
+    if ($("#cconu_h").val().length === 0) {
+      flgError = true;
+     $("#spnNumVel").html('Digita un número de veliz válido');
+     $("#cconu_h").siblings(".help-block").show();
+     $("#cconu_h").parent().addClass("has-error");
+    } else {
+      $(this).siblings(".help-block").hide();
+      $(this).parent().removeClass("has-error");
+    }
+  });
+
+   // Si no hay error ejecuta respuesta
+   if (!flgError) {
+     ExcQry();
+   }
+ });
+
+</script>
+  <div class="breadcrumb">
+    <div class="container">
+      <ul class="list-unstyled">
+        <li><a href="javaScript:excPgm(&#39;jnthome&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);">Inicio</a></li>
+        <li class="active">Estado de Cuenta &gt; Grupo Personal &gt; Actualizado por animador</li>
+      </ul>
+    </div>
+  </div>
+    <!--Reports-->
+    <div class="reports-main-page active container" style="overflow:auto; -webkit-overflow-scrolling:touch;">
+      <div class="content-wrapper">
+        <div class="container">
+          <!-- Form Start-->
+          <div class="row">
+            <div class="col-lg-14 col-md-14">
+              <div class="form-report-params">
+                <h1 class="page-title text-uppercase">Actualizado por animador</h1>
+                <form class="xform" id="frmConActAni">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Búsqueda por Estado:</label>
+                        <select class="form-control" id="ccpco_h" name="ccpco_h">
+                          <option value="">Todos</option>
+<option value="13">Aguascalientes</option>
+<option value="01">Baja California</option>
+<option value="02">Baja California Sur</option>
+<option value="30">Campeche</option>
+<option value="05">Chihuahua</option>
+<option value="07">Coahuila</option>
+<option value="15">Colima</option>
+<option value="29">Chiapas</option>
+<option value="18">Ciudad de México</option>
+<option value="06">Durango</option>
+<option value="23">Guerrero</option>
+<option value="17">Guanajuato</option>
+<option value="20">Hidalgo</option>
+<option value="14">Jalisco</option>
+<option value="21">Mexico</option>
+<option value="16">Michoacan</option>
+<option value="22">Morelos</option>
+<option value="99">Extranjero</option>
+<option value="08">Nuevo Leon</option>
+<option value="10">Nayarit</option>
+<option value="27">Oaxaca</option>
+<option value="25">Puebla</option>
+<option value="32">Quintana Roo</option>
+<option value="19">Queretaro</option>
+<option value="04">Sinaloa</option>
+<option value="12">San Luis Potosi</option>
+<option value="03">Sonora</option>
+<option value="28">Tabasco</option>
+<option value="24">Tlaxcala</option>
+<option value="09">Tamaulipas</option>
+<option value="26">Veracruz</option>
+<option value="31">Yucatan</option>
+<option value="11">Zacatecas</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Búsqueda por Nombre:</label>
+                        <input type="text" class="form-control onlyAlpha" placeholder="Nombre" id="tv18_h" name="tv18_h" onblur="this.value=this.value.toUpperCase();" value="">                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Clave de Crédito:</label>
+                        <select class="form-control" id="cvcre_h" name="cvcre_h">
+                          <option value="">Todas</option>
+<option value="00">00</option>
+<option value="18">18</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="90">90</option>
+<option value="31">31</option>
+<option value="61">61</option>
+<option value="91">91</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Género:</label>
+                        <select class="form-control" id="gener_h" name="gener_h">
+                          <option selected="">Todos</option>
+<option value="M">Masculino </option>
+<option value="F">Femenino  </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Ver Dirección:</label>
+                        <select class="form-control" id="sprqt_h" name="sprqt_h">
+                          <option value="01">Sin Dirección</option>
+                          <option value="02" selected="">Con Dirección</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Grupo Personal:</label>
+                        <select class="form-control" id="spdst_h" name="spdst_h">
+                          <option value="">Todos los Consultores</option>                          <option value="2" selected="">Consultores Activos</option>                          <option value="3">Consultores Potenciales a Inactivarse</option>                          <option value="4">Consultores Inactivos</option>                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Veliz:</label>
+                          <input type="text" class="form-control onlyNumber" placeholder="Número de Veliz" id="cconu_h" name="cconu_h" maxlength="9" value="1033589">
+                      <span id="spnNumVel" class="help-block error-msg" style="display: none;">Digita un número de veliz válido.</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="control-label">Vip:</label>
+                        <select class="form-control" id="vip_h" name="vip_h">
+                          <option value=" ">Todos</option>
+<option value="Si">Si</option>
+<option value="No">No</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4" style="display:none;">
+                      <div class="form-group">
+                        <label for="" class="control-label">Consultores:</label>
+                        <select class="form-control" id="spcon_h" name="spcon_h">
+<option value="A" selected="">Todas</option>
+<option value="B">U - 16 a 26 Años</option>
+<option value="C">27 Años o más</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" id="btnConActAni" class="btn btn-blue-light ConActAni">CONSULTAR</button>
+                </form>
+                <br>
+                <div class="report">
+                  <div class="tab0">
+                    <div class="header">
+                      <div class="box">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="c1">
+                              <div class="row">
+                                <div class="col-md-6 col-sm-7 col-xs-6 t1"><strong>Nombre:</strong></div>
+                                <div class="col-md-6 col-sm-5 col-xs-6 t2">
+LUIS ANGEL GUAJARDO MORENO                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 col-sm-7 col-xs-6 t1"><strong>Al día:</strong></div>
+                                <div class="col-md-6 col-sm-5 col-xs-6 t2">
+2022-MAYO-19                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 col-sm-7 col-xs-6 t1"><strong>Categoría de Linaje:</strong></div>
+                                <div class="col-md-6 col-sm-5 col-xs-6 t2">
+            ANIM                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="c2">
+                              <div class="row">
+                                <div class="col-md-6 col-sm-7 col-xs-6 t1"><strong>Clave de Crédito Correcto:</strong></div>
+                                <div class="000" style="color: rgb(0, 153, 51);">Verde</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 col-sm-7 col-xs-6 t1"><strong>Clave de Crédito en Recuperación:</strong></div>
+                                <div class="031" style="color: rgb(208, 130, 28);">Naranja</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 col-sm-7 col-xs-6 t1"><strong>Clave de Crédito Vencida:</strong></div>
+                                <div class="030" style="color: rgb(255, 0, 0);">Rojo</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-report">
+                  <div class="table-area">
+                    <div class="table-responsive">
+                      <div id="reporte_wrapper" class="dataTables_wrapper no-footer" style="width:110%">
+                        <!-- Codigo de colores del detalle -->
+                        <table id="reporte" class="table table-blk">
+                          <thead>
+                            <tr class="head">
+                              <th style="width:5px" rowspan="2">D/I</th>
+                              <th colspan="2" rowspan="2">VELIZ</th>
+                              <th colspan="6" rowspan="2">NOMBRE</th>
+                              <th colspan="3" class="text-center">MÓDULOS SOLICITADOS</th>
+                              <th style="width:5px" colspan="1">MOD.PAG.</th>
+                              <th colspan="4" class="text-center">ÚLTIMO PEDIDO</th>
+                              <th colspan="2">PATROC.</th>
+                              <th style="width:5px" rowspan="2">VIP</th>
+                              <th style="width:5px" rowspan="2">SALDO<br>ACTUAL</th>
+                              <th style="width:5px" rowspan="2">CVE<br>CRE</th>
+                              <th colspan="3" class="text-center">ÚLTIMO PAGO REGISTRO</th>
+                              <th style="width:15px" rowspan="2">FIJO</th>
+                              <th style="width:15px" rowspan="2">MÓVIL</th>
+                              <th colspan="1" rowspan="2">LÍMITE<br>PAGO<br>ULT<br>PEDIDO</th>
+                            </tr>
+                            <tr class="head">
+                              <th style="width:5px">MES<br>ANT</th>
+                              <th style="width:5px">MES<br>ACT</th>
+                              <th style="width:5px">ANUAL</th>
+                              <th>A 30 DÍAS</th>
+                              <th style="width:15px">IMP.LET.A</th>
+                              <th style="width:15px">MODS</th>
+                              <th style="width:15px" colspan="2">FECHA</th>
+                              <th style="width:5px">ANT</th>
+                              <th style="width:5px">ACT</th>
+                              <th style="width:15px">IMPORTE</th>
+                              <th style="width:15px" colspan="2">FECHA</th>
+                            </tr>
+                          </thead>
+                          <!-- Detalle de la consulta -->
+                          <tbody>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">I</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(1033589)" style="color: rgb(0, 153, 51);">  1033589-77                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">LUIS ANGEL GUAJARDO MO</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">1.11</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  5.07</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  1.11</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,703.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.11</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-30</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;1033589&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;1033589&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;001033589&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">           $.77-</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $2,095.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-29</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8189972664  </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-30</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">FERNANDO DE LIZARDI No 777 COUNTRY LA SILLA SECTOR 3 67173 N.L. GUADALUPE</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">1033094</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2000-10-27</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">D</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(1525839)" style="color: rgb(0, 153, 51);">  1525839-36                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">JESSICA IVETT BALDERAS</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  1.10</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  1.10</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,701.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.10</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-17</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;1525839&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;1525839&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;001525839&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">      $2,101.58</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $1,910.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2021-01-11</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">018183171216</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-06-16</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">SEGUNDA NO EXT 820 LA HERRADURA 67140 N.L. GUADALUPE</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2002-10-04</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">I</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(12146375)" style="color: rgb(0, 153, 51);"> 12146375-54                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">ZENAIDA CRISTOBAL GERT</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">1.12</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  4.69</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,723.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.12</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-30</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;12146375&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;12146375&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;012146375&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">      $2,128.76</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $2,559.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-22</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8128911546  </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-30</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">AMAR Y VIVIR No. Ext: 543 Int: B CANTORAL 66673 N.L. PESQUERIA</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">7351801</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2021-04-26</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">D</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(7351801)" style="color: rgb(0, 153, 51);">  7351801-46                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">FLORA ANTONIO SEBASTIA</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">2.46</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  5.73</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $3,794.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 2.46</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-30</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;7351801&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;7351801&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;007351801&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">      $4,531.30</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $2,769.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-29</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8112421906  </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-30</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">NOCHEBUENA NO 155 Cantoral 66673 N.L. PESQUERIA</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2014-11-26</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">D</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(12011795)" style="color: rgb(0, 153, 51);"> 12011795-70                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">YOLANDA VEGA RUIZ</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">1.14</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  2.89</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,761.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.14</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-26</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;12011795&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;12011795&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;012011795&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">      $2,173.10</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $1,330.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-04</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8131184023  </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-26</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">EBANO No. Ext: 106 EL LLANO 66655 N.L. PESQUERIA</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2020-09-30</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">D</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(6850842)" style="color: rgb(0, 153, 51);">  6850842-24                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">ANGELICA VALDES GARZA</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">1.14</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  1.14</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  1.14</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,752.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.14</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-26</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;6850842&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;6850842&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;006850842&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">          $1.37-</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $2,218.37 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-28</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">018183500173</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8116653149  </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-26</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">ROBERTO MONTENEGRO No. Ext: 224 RESIDENCIAL EL ROBLE 66414 N.L. NICOLAS DE GARZA</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2013-10-30</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">I</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(3225020)" style="color: rgb(0, 153, 51);">  3225020-74                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">MARIA ISABEL HERNANDEZ</td>
+                              <td class="000" style="color: rgb(0, 153, 51);">1.15</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  2.39</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,777.00 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.15</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-23</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;3225020&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;3225020&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;003225020&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">      $2,191.17</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $2,347.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-08</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8111015249  </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-05-23</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">LULACH 900 Real de Lincoln 66013 N.L. GARCIA</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">1466376</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2006-11-28</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="031" style="color: rgb(208, 130, 28);">D</td>
+                              <td class="031" colspan="2" style="color: rgb(208, 130, 28);"><a class="031" href="javaScript:ExcEdoCta(12106686)" style="color: rgb(208, 130, 28);"> 12106686-26                              </a>                              </td>
+                              <td class="031" colspan="6" style="color: rgb(208, 130, 28);">ERENDIRA MAYA DELGADO</td>
+                              <td class="031" style="color: rgb(208, 130, 28);"></td>
+                              <td class="031" style="color: rgb(208, 130, 28);"></td>
+                              <td class="031" style="color: rgb(208, 130, 28);">  1.36</td>
+                              <td class="031" style="color: rgb(208, 130, 28);"></td>
+                              <td class="031" style="text-align: right; color: rgb(208, 130, 28);"> $2,091.00 </td>
+                              <td class="031" style="color: rgb(208, 130, 28);"> 1.36</td>
+                              <td class="031" colspan="2" style="color: rgb(208, 130, 28);">2022-03-31</td>
+                              <td class="031" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(208, 130, 28);" onclick="ExcPatroc(&#39;12106686&#39;);" title="Ver Detalle"></td>
+                              <td class="031" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(208, 130, 28);" onclick="ExcPatroc(&#39;12106686&#39;);" title="Ver Detalle"></td>
+                              <td class="031" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(208, 130, 28);" onclick="ExcClbVip(&#39;012106686&#39;);" title="Ver Detalle">Si</td>
+                              <td class="031" style="text-align: right; color: rgb(208, 130, 28);">          $4.80-</td>
+                              <td class="031" style="color: rgb(208, 130, 28);"> 31</td>
+                              <td class="031" style="text-align: right; color: rgb(208, 130, 28);">  $2,560.00 </td>
+                              <td class="031" colspan="2" style="color: rgb(208, 130, 28);">2022-05-09</td>
+                              <td class="031" style="text-align: right; color: rgb(208, 130, 28);">            </td>
+                              <td class="031" style="text-align: right; color: rgb(208, 130, 28);">8281233081  </td>
+                              <td class="031" colspan="2" style="color: rgb(208, 130, 28);">2022-04-30</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="031" colspan="26" style="text-align: left; color: rgb(208, 130, 28);">ANEMONA No. Ext: 200 JARDINES DE CADEREYTA 67485 N.L. CADEREYTA JIMENEZ</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="031" style="color: rgb(208, 130, 28);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="031" colspan="3" style="color: rgb(208, 130, 28);">2021-02-28</td>
+                              <td class="031" colspan="19" <="" td="" style="color: rgb(208, 130, 28);">                            </td></tr>
+                            <tr>
+                              <td class="000" style="color: rgb(0, 153, 51);">I</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);"><a class="000" href="javaScript:ExcEdoCta(7949778)" style="color: rgb(0, 153, 51);">  7949778-24                              </a>                              </td>
+                              <td class="000" colspan="6" style="color: rgb(0, 153, 51);">ANTONIA ALONSO HERNAND</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="color: rgb(0, 153, 51);">  1.16</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);"> $1,779.50 </td>
+                              <td class="000" style="color: rgb(0, 153, 51);"> 1.16</td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-03-19</td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;7949778&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcPatroc(&#39;7949778&#39;);" title="Ver Detalle"></td>
+                              <td class="000" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(0, 153, 51);" onclick="ExcClbVip(&#39;007949778&#39;);" title="Ver Detalle">Si</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">           $.61-</td>
+                              <td class="000" style="color: rgb(0, 153, 51);"></td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  $2,194.00 </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-15</td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">            </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">8116405906  </td>
+                              <td class="000" colspan="2" style="color: rgb(0, 153, 51);">2022-04-18</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="000" colspan="26" style="text-align: left; color: rgb(0, 153, 51);">PRIV. DAMIAN CARMONA No. Ext: 256 Depto: 17 ZAPATA 64390 N.L. MONTERREY</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="000" style="color: rgb(0, 153, 51);">3225020</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="000" colspan="3" style="color: rgb(0, 153, 51);">2016-01-21</td>
+                              <td class="000" colspan="19" <="" td="" style="color: rgb(0, 153, 51);">                            </td></tr>
+                            <tr>
+                              <td class="060" style="color: rgb(255, 0, 0);">D</td>
+                              <td class="060" colspan="2" style="color: rgb(255, 0, 0);"><a class="060" href="javaScript:ExcEdoCta(12079313)" style="color: rgb(255, 0, 0);"> 12079313-91                              </a>                              </td>
+                              <td class="060" colspan="6" style="color: rgb(255, 0, 0);">LUIS ARMANDO GARCIA MO</td>
+                              <td class="060" style="color: rgb(255, 0, 0);"></td>
+                              <td class="060" style="color: rgb(255, 0, 0);"></td>
+                              <td class="060" style="color: rgb(255, 0, 0);">  2.80</td>
+                              <td class="060" style="color: rgb(255, 0, 0);"></td>
+                              <td class="060" style="text-align: right; color: rgb(255, 0, 0);"> $1,756.50 </td>
+                              <td class="060" style="color: rgb(255, 0, 0);"> 1.14</td>
+                              <td class="060" colspan="2" style="color: rgb(255, 0, 0);">2022-02-28</td>
+                              <td class="060" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(255, 0, 0);" onclick="ExcPatroc(&#39;12079313&#39;);" title="Ver Detalle"></td>
+                              <td class="060" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(255, 0, 0);" onclick="ExcPatroc(&#39;12079313&#39;);" title="Ver Detalle"></td>
+                              <td class="060" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(255, 0, 0);" onclick="ExcClbVip(&#39;012079313&#39;);" title="Ver Detalle"></td>
+                              <td class="060" style="text-align: right; color: rgb(255, 0, 0);">      $2,166.83</td>
+                              <td class="060" style="color: rgb(255, 0, 0);"> 60</td>
+                              <td class="060" style="text-align: right; color: rgb(255, 0, 0);">  $1,774.00 </td>
+                              <td class="060" colspan="2" style="color: rgb(255, 0, 0);">2022-03-01</td>
+                              <td class="060" style="text-align: right; color: rgb(255, 0, 0);">            </td>
+                              <td class="060" style="text-align: right; color: rgb(255, 0, 0);">8128992130  </td>
+                              <td class="060" colspan="2" style="color: rgb(255, 0, 0);">2022-03-30</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="060" colspan="26" style="text-align: left; color: rgb(255, 0, 0);">AVENIDA LOS PARQUES No. Ext: 910 LOS PARQUES 66023 N.L. GARCIA</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="060" style="color: rgb(255, 0, 0);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="060" colspan="3" style="color: rgb(255, 0, 0);">2021-01-22</td>
+                              <td class="060" colspan="19" <="" td="" style="color: rgb(255, 0, 0);">                            </td></tr>
+                            <tr>
+                              <td class="090" style="color: rgb(255, 0, 0);">D</td>
+                              <td class="090" colspan="2" style="color: rgb(255, 0, 0);"><a class="090" href="javaScript:ExcEdoCta(12346013)" style="color: rgb(255, 0, 0);"> 12346013-44                              </a>                              </td>
+                              <td class="090" colspan="6" style="color: rgb(255, 0, 0);">ANDREA HERNANDEZ CAPIT</td>
+                              <td class="090" style="color: rgb(255, 0, 0);"></td>
+                              <td class="090" style="color: rgb(255, 0, 0);"></td>
+                              <td class="090" style="color: rgb(255, 0, 0);">  1.11</td>
+                              <td class="090" style="color: rgb(255, 0, 0);"></td>
+                              <td class="090" style="text-align: right; color: rgb(255, 0, 0);"> $1,708.00 </td>
+                              <td class="090" style="color: rgb(255, 0, 0);"> 1.11</td>
+                              <td class="090" colspan="2" style="color: rgb(255, 0, 0);">2022-02-09</td>
+                              <td class="090" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(255, 0, 0);" onclick="ExcPatroc(&#39;12346013&#39;);" title="Ver Detalle"></td>
+                              <td class="090" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(255, 0, 0);" onclick="ExcPatroc(&#39;12346013&#39;);" title="Ver Detalle"></td>
+                              <td class="090" style="cursor: pointer; text-decoration: underline; text-align: center; color: rgb(255, 0, 0);" onclick="ExcClbVip(&#39;012346013&#39;);" title="Ver Detalle"></td>
+                              <td class="090" style="text-align: right; color: rgb(255, 0, 0);">      $2,308.85</td>
+                              <td class="090" style="color: rgb(255, 0, 0);"> 90</td>
+                              <td class="090" style="text-align: right; color: rgb(255, 0, 0);">  $2,126.43 </td>
+                              <td class="090" colspan="2" style="color: rgb(255, 0, 0);">2022-01-17</td>
+                              <td class="090" style="text-align: right; color: rgb(255, 0, 0);">            </td>
+                              <td class="090" style="text-align: right; color: rgb(255, 0, 0);">8261748722  </td>
+                              <td class="090" colspan="2" style="color: rgb(255, 0, 0);">2022-03-11</td>
+                            </tr><tr>
+                              <th colspan="2" class="head">DIRECCION</th>
+                              <td class="090" colspan="26" style="text-align: left; color: rgb(255, 0, 0);">ALLENDE NTE No. Ext: 716 CIUDAD ALLENDE 67350 N.L. ALLENDE</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2" class="head">PATROC.</th>
+                              <td class="090" style="color: rgb(255, 0, 0);">1033589</td>
+                              <th colspan="3" class="head">FECH.<br>ING.</th>
+                              <td class="090" colspan="3" style="color: rgb(255, 0, 0);">2021-12-17</td>
+                              <td class="090" colspan="19" <="" td="" style="color: rgb(255, 0, 0);">                            </td></tr>
+                            <tr>
+                              <td class="totales" colspan="3">TOTAL</td>
+                              <td class="totales" colspan="6" style="text-align:center"> 11                              </td><td class="totales"> 8.12</td>
+                              <td class="totales"> 1.10                              </td>
+                              <td class="totales"> 29.44                              </td>
+                              <td class="totales" colspan="16"></td>
+                              
+                            </tr>
+                        </tbody></table>
+                        <br>
+                        <table id="reporte" class="table table-blk" style="width:50%">
+                          <tbody><tr class="head">
+
+                            <th>Total Clave 00: 
+                              </th><td class="000" style="text-align: right; color: rgb(0, 153, 51);">    $13,123.16 </td>
+                              <td class="000" style="text-align: right; color: rgb(0, 153, 51);">  8 </td>
+                          </tr>
+                          <tr class="head">
+
+                            <th>Total Clave 30: 
+                              </th><td class="030" style="text-align: right; color: rgb(255, 0, 0);">          $.00 </td>
+                              <td class="030" style="text-align: right; color: rgb(255, 0, 0);">  0 </td>
+                          </tr>
+                          <tr class="head">
+
+                            <th>Total Clave 60: 
+                              </th><td class="060" style="text-align: right; color: rgb(255, 0, 0);">     $2,166.83 </td>
+                              <td class="060" style="text-align: right; color: rgb(255, 0, 0);">  1 </td>
+                          </tr>
+                          <tr class="head">
+
+                            <th>Total Clave 90: 
+                              </th><td class="090" style="text-align: right; color: rgb(255, 0, 0);">     $2,308.85 </td>
+                              <td class="090" style="text-align: right; color: rgb(255, 0, 0);">  1 </td>
+                          </tr>
+                          <tr class="head">
+
+                            <th>Total Clave 31: 
+                              </th><td class="031" style="text-align: right; color: rgb(208, 130, 28);">         $4.80-</td>
+                              <td class="031" style="text-align: right; color: rgb(208, 130, 28);">  1 </td>
+                          </tr>
+                          <tr class="head">
+
+                            <th>Total Clave 61: 
+                              </th><td class="061" style="text-align: right; color: rgb(208, 130, 28);">          $.00 </td>
+                              <td class="061" style="text-align: right; color: rgb(208, 130, 28);">  0 </td>
+                          </tr>
+                          <tr class="head">
+
+                            <th>Total Clave 91: 
+                              </th><td class="091" style="text-align: right; color: rgb(208, 130, 28);">          $.00 </td>
+                              <td class="091" style="text-align: right; color: rgb(208, 130, 28);">  0 </td>
+                          </tr>
+                        </tbody></table>
+                      </div> <!-- <div id="reporte_wrapper" class="dataTables_wrapper no-footer">      -->
+                    </div>   <!-- <div class="table-reponsive">                                        -->
+                  </div>     <!-- <div class="table-area">                                             -->
+                </div>       <!-- <div class="form-report">                                            -->
+              </div>         <!-- <div class="form-report-params">                                     -->
+            </div>           <!-- <div class="col-lg-14 col-md-14">                                    -->
+          </div>             <!-- <div class="row">                                                    -->
+        </div>               <!-- <div class="container">                                              -->
+      </div>                 <!-- <div class="content-wrapper">                                        -->
+    </div>                   <!-- <div class="reports-main-page active container">                     -->
+
+  <form id="FrmEdoCta" name="FrmEdoCta">
+    <input type="hidden" name="vel_h" value="">
+    <input type="hidden" name="velpat" value="">
+  </form>
+
+  <form id="FrmMain" name="FrmMain">
+    <input type="hidden" name="fil_h" value="B">
+    <input type="hidden" name="vel_h" value="">
+    <input type="hidden" name="srind_h" value="">
+    <input type="hidden" name="spcon_h" value="">
+    <input type="hidden" name="ccpco_h" value="">
+    <input type="hidden" name="tv18_h" value="">
+    <input type="hidden" name="cvcre_h" value="">
+    <input type="hidden" name="gener_h" value="">
+    <input type="hidden" name="sprqt_h" value="">
+    <input type="hidden" name="spdst_h" value="">
+    <input type="hidden" name="cconu_h" value="">
+    <input type="hidden" name="vip_h" value="">
+  </form>
+
+    </main>
+    <!-- Video Modal -->
+
+    <!-- Video Modal 1 -->
+
+    <!-- Notificaciones Modal -->
+    <div class="modal fade cpop" id="notificaciones" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+      <!--  <button id="btCloseNMsg" onClick="fnCloseNMsg()" type="button"
+                    class="close animated rotateIn" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+            </button>                                                            -->
+            <h4 class="modal-title" id="myModalLabel">Avisos!!!</h4>
+          </div>
+          <div class="modal-body">
+            <p id="pNotMsgCont"></p>
+          </div>
+          <div class="col-xs-6" style="margin-left: 140px;">
+           <a href="javascript:void(0);" onclick="fnCloseNMsg();" data-dismiss="modal" class="btn full btn-blue-light" style="text-transform:none;">
+            Aceptar
+           </a>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviso de Privacidad -->
+    <div class="modal fade cpop" id="avisoPrivacidad" role="dialog" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button id="btnCloseWindow" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+            <h4 class="modal-title" id="myModalLabel">AVISO DE PRIVACIDAD</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row kit">
+              <div class="col-md-9 col-sm-8 nano-content" style="width: 100%;">
+                <div class="configGroup row first current">
+                  <div class="col-md-12 col-sm-12">
+                    <div class="product-variations modelContent">
+                     <object type="application/pdf" width="100%" style="height:500px" data="./JAFRAnet2_files/avisodeprivacidad.html"></object>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviso de Lineamientos Generales Viajes y Eventos -->
+    <div class="modal fade cpop" id="avisoLinGrales" role="dialog" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button id="btnCloseWindow" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+            <h4 class="modal-title" id="myModalLabel">LINEAMIENTOS GENERALES VIAJES Y EVENTOS</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row kit">
+              <div class="col-md-9 col-sm-8 nano-content" style="width: 100%;">
+                <div class="configGroup row first current">
+                  <div class="col-md-12 col-sm-12">
+                    <div class="product-variations modelContent">
+                     <object type="application/pdf" width="100%" style="height:500px" data="./JAFRAnet2_files/LineamientosGenerales.html"></object>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer class="footer">
+      <div class="seprator-hold">
+        <img src="./JAFRAnet2_files/seprator01.png" alt="">
+      </div>
+      <div class="footer-social">
+        <div class="container">
+         	<div class="row">
+           	<div class="col-md-12 col-sm-12">
+             	<ul class="social-network">
+                <li><a href="https://www.facebook.com/jaframxoficial" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/user/JAFRAMEXICO" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/jafra_mx/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.pinterest.com/jaframexico/" target="_blank" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                <li><a href="https://twitter.com/jaframexico" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="container">
+          <ul class="list-unstyled">
+            <li><a href="javascript:fnJMia(&#39;CKModLadyV6&#39;);">JAFRAmía</a></li>
+            <li><a href="javaScript:excPgm(&#39;JntContSer&#39;,&#39;JntContSer&#39;,&#39;&#39;,&#39;&#39;);">Contáctanos</a></li>
+            <li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" type="button" data-toggle="modal" data-target="#avisoPrivacidad">Privacidad</a></li>
+            <li><a href="https://jafranet.com.mx/JntCgi/JNTDCXANI.pgm#" type="button" data-toggle="modal" data-target="#avisoLinGrales">Lineamientos Generales Viajes y Eventos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <ul id="CopyRight">JAFRA COSMETICS INTERNATIONAL, JAFRA Y JAFRANET SON MARCAS REGISTRADAS EN MÉXICO.<br>SALUD ES BELLEZA.<br>© 2020 DERECHOS RESERVADOS, QUEDA PROHIBIDA CUALQUIER COPIA, EDICIÓN, DIVULGACIÓN, PUBLICACIÓN, DISTRIBUCIÓN Y/O REPRODUCCIÓN TOTAL O PARCIAL SIN AUTORIZACIÓN DE SU TITULAR.<br>Información Confidencial, exclusiva para uso interno de los Comerciantes Independientes para el desarrollo de su Negocio Propio e Independiente.</ul>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+  </div><!-- End Page -->
+
+  <form id="frmGr" method="post">
+    <input type="hidden" id="tip_h" name="tip_h" value="">
+    <input type="hidden" id="tit_h" name="tit_h" value="">
+    <input type="hidden" id="v01_h" name="v01_h" value="">
+    <input type="hidden" id="v02_h" name="v02_h" value="">
+    <input type="hidden" id="v03_h" name="v03_h" value="">
+    <input type="hidden" id="v04_h" name="v04_h" value="">
+    <input type="hidden" id="v05_h" name="v05_h" value="">
+    <input type="hidden" id="v06_h" name="v06_h" value="">
+    <input type="hidden" id="t01_h" name="t01_h" value="">
+    <input type="hidden" id="t02_h" name="t02_h" value="">
+    <input type="hidden" id="t03_h" name="t03_h" value="">
+    <input type="hidden" id="t04_h" name="t04_h" value="">
+    <input type="hidden" id="t05_h" name="t05_h" value="">
+    <input type="hidden" id="t06_h" name="t06_h" value="">
+  </form>
+
+  <!-- jQuery -->
+  <script src="./JAFRAnet2_files/bootstrap.min.js"></script>
+  <script src="./JAFRAnet2_files/jquery.main.js"></script>
+  <script src="./JAFRAnet2_files/jquery-ui.js"></script>
+  <script src="./JAFRAnet2_files/jcf.js"></script>
+  <script src="./JAFRAnet2_files/jcf.select.js"></script>
+  <script src="./JAFRAnet2_files/jquery.mobile-menu.min.js"></script>
+  <script src="./JAFRAnet2_files/jquery.countdown.min.js"></script>
+  <script>
+
+    //Cuenta regresiva
+  //$('.cuenta-regresiva').countdown('2020/12/10 00:00:00',function(event){
+  //$('.cuenta-regresiva').countdown(frmCountDown.date.value + ' ' + frmCountDown.time.value,function(event){
+  //    $('#dias').html(event.strftime('%D'));
+  //    $('#horas').html(event.strftime('%H'));
+  //    $('#minutos').html(event.strftime('%M'));
+  //    $('#segundos').html(event.strftime('%S'));
+  //});
+
+  //$(".notificaciones a").click(function(){
+  //    $(this).children(".label-info").hide();
+  //});
+
+  //$(".glyphicon-alert a").click(function(){
+  //    $(this).children(".label-info").hide();
+  //});
+
+  //$(".opener").click(function(){
+  //    $(this).children("span").hide();
+        //alert("Clic");
+  //});
+
+  </script>
+<script>
+
+    // var config = {
+    //     type: 'doughnut',
+    //     data: {
+    //         datasets: [{
+    //             data: [ 2,
+    //                     10,
+    //                     12],
+    //             backgroundColor: [
+    //             "#470a68",
+    //             "#ba0c2f",
+    //             "#000000"
+    //             ],
+    //             label: 'Módulos acumulados'
+    //         }],
+    //         labels: [
+    //             'Personal',
+    //             'Grupo Personal',
+    //             'Total']
+    //     },
+    //     options: {
+    //         responsive: true
+    //     }
+    // };
+
+    // var config2 = {
+    //     type: 'doughnut',
+    //     data: {
+    //         datasets: [{
+    //             data: [ 2,
+    //                     8,
+    //                     10],
+    //             backgroundColor: [
+    //             "#470a68",
+    //             "#ba0c2f",
+    //             "#000000"
+    //             ],
+    //             label: 'Modulos pagados antes de vencimiento'
+    //         }],
+    //         labels: ['Personal',
+    //             'Grupo Personal',
+    //             'Total']
+    //     },
+    //     options: {
+    //         responsive: true
+    //     }
+    // };
+
+    // var config3 = {
+    //     type: 'doughnut',
+    //     data: {
+    //         datasets: [{
+    //             data: [10,
+    //                     30,
+    //                     40
+    //             ],
+    //             backgroundColor: [
+    //             "#470a68",
+    //             "#ba0c2f",
+    //             "#000000"
+    //             ],
+    //             label: 'Patrocinios'
+    //         }],
+    //         labels: [
+    //             'Directos',
+    //             'Indirectos',
+    //             'Total'
+    //         ]
+    //     },
+    //     options: {
+    //         responsive: true
+    //     }
+    // };
+
+  //var config4 = {
+  //    type: frmGBar.tip_h.value,
+  //    data: {
+  //        datasets: [{
+  //            label: frmGBar.tit_h.value,
+  //            data: [frmGBar.v01_h.value,frmGBar.v02_h.value,frmGBar.v03_h.value,frmGBar.v04_h.value,],
+  //          //backgroundColor:  '#470a68',                                              // solo lineal
+  //            backgroundColor: ['#470a68','#FFFFFF','#ba0c2f','#000000','#470a68'],     // No lineal
+  //          borderColor: '#ba0c2f',           // con efecto solo para gráfico lineal   (type: 'line',)
+  //          fill: false,                      // con efecto solo para gráfico lineal   (type: 'line',)
+  //          //borderDash: [5, 5],             // con efecto solo para gráfico lineal   (type: 'line',)
+  //          pointRadius: 5,                   // con efecto solo para gráfico lineal   (type: 'line',)
+  //          pointHoverRadius: 10,             // con efecto solo para gráfico lineal   (type: 'line',)
+  //        }],
+  //        labels: [
+  //                 frmGBar.t01_h.value,
+  //                 frmGBar.t02_h.value,
+  //                 frmGBar.t03_h.value,
+  //                 frmGBar.t04_h.value,
+  //                ],
+  //    },
+  //    options: { responsive: true }
+  //};
+
+  //var config5 = {
+  //    type: 'pie',
+  //    data: {
+  //        datasets: [{
+  //            label: 'Grupo Personal',
+  //            data: [75,28,4,43],
+  //            backgroundColor: ['#470a68','#FFFFFF','#ba0c2f','#000000','#470a68'],
+  //        }],
+  //        labels: ['Base de Consultores','Consultores Activos','Potenciales a Inactivarse','Consultores Inactivos']
+  //    },
+  //    options: { responsive: true }
+  //};
+
+  //var config6 = {
+  //    type: 'line',
+  //    data: {
+  //        datasets: [{
+  //            label: 'Productividad del Grupo Personal',
+  //            data: [32.33,25.71,27.48,20.48,14.11,1.16],
+  //            backgroundColor: '#470a68',                                                 // solo lineal
+  //          //backgroundColor: ['#470a68','#FFFFFF','#ba0c2f','#000000','#470a68'],       // no lineal
+  //            borderColor: '#ba0c2f',
+  //            fill: false,
+  //            //borderDash: [5, 5],
+  //            pointRadius: 5,
+  //            pointHoverRadius: 10,
+  //        }],
+  //        labels: ['Jun','Jul','Ago','Sep','Oct','Nov']
+  //    },
+  //    options: { responsive: true }
+  //};
+    window.onload = function() {
+
+     // $(".section.home-section-2").css({display: ""});
+
+
+        // var ctx = document.getElementById('chart-area').getContext('2d');
+        // window.myPie = new Chart(ctx, config);
+
+        // var ctx2 = document.getElementById('chart-area2').getContext('2d');
+        // window.myPie = new Chart(ctx2, config2);
+
+        // var ctx3 = document.getElementById('chart-area3').getContext('2d');
+        // window.myPie = new Chart(ctx3, config3);
+
+ //     var ctx4 = document.getElementById('chart-area4').getContext('2d');
+ //     window.myPie = new Chart(ctx4, config4);
+
+ //     var ctx5 = document.getElementById('chart-area5').getContext('2d');
+ //     window.myPie = new Chart(ctx5, config5);
+
+ //     var ctx6 = document.getElementById('chart-area6').getContext('2d');
+ //     window.myPie = new Chart(ctx6, config6);
+    };
+</script>
+
+
+
+<form id="frmNotMsg" name="frmNotMsg" method="post"><input type="hidden" name="NMsgCount" id="NMsgCount" value="0"><input type="hidden" name="NMsgLastD" id="NMsgLastD" value="0"></form></body></html>
