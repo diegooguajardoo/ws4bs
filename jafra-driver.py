@@ -31,7 +31,7 @@ field("cta_h","1033094")
 username = driver.find_element(By.ID,"cta_h")
 username.send_keys(Keys.TAB)
 
-field("pwd_h", "2181")
+field("pwd_h", "****")
 password = driver.find_element(By.ID,"pwd_h")
 password.send_keys(Keys.ENTER)
 
