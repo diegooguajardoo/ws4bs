@@ -9,8 +9,30 @@ import csv
 #	html.render()
 #
 
-def scrape():
-	with open("JAFRAnet.html", errors="ignore") as html_file:
+def intro():
+	noffiles = ""
+	archivos = []
+	while noffiles != 'quit':
+		noffiles = input("\n\nCuántos archivos se van a analizar?: ")
+		noffiles = int(noffiles)
+
+		for i in range(1, noffiles+1):
+			if noffiles == 1:
+				filenm = "JAFRANET.html"
+				archivos.append(filenm)
+			else:
+				filenm = "JAFRANET (" + str(i) + ").html"
+				archivos.append(filenm)
+
+		print(f"Los archivos están nombrados {str(archivos)}?")
+		qt = input("Correcto?: (si/no)").lower()
+		if qt == "si":
+			return archivos
+		elif qt == "sí":
+			return archivos
+
+def scrape(fl):
+	with open(file=fl, errors="ignore") as html_file:
 		source = html_file.read()
 		html = HTML(html=source)
 		html.render()
@@ -45,7 +67,8 @@ def scrape():
 		elif table_data1 == "D":
 			directas = directas + 1
 			total = total + 1
-	print(f"Directas {directas} e indirectas {indirectas} total {total}")
+	print(f"Nombre: {table_data[2].text}")
+	print(f"Se registraron {total} animadoras: directas {directas} e indirectas {indirectas}\n")
 	
 	animadoras = []
 	count = 0
@@ -58,10 +81,19 @@ def scrape():
 		animadoras.append(animadora)
 	return animadoras
 
-animadoras = scrape()
+archivos = intro()
 
-with open('jafra.csv', 'w',) as csvfile:
-	csvwriter = csv.writer(csvfile)
-#	csvwriter.writerows(table_heads)
-#	csvwriter.writerows(header)
-	csvwriter.writerows(animadoras)
+for i in archivos:
+	try:
+		animadoras = scrape(fl=i)
+	except:
+		print("ERROR: Hacen falta archivos o se encuentran nombrados diferente. Por favor revisar e intentar nuevamente")
+		quit()
+	with open('jafra.csv', 'w',) as csvfile:
+		csvwriter = csv.writer(csvfile)
+		csvwriter.writerows(animadoras)
+
+
+
+
+
