@@ -68,7 +68,7 @@ def scrape(fl):
 		elif table_data1 == "D":
 			directas = directas + 1
 			total = total + 1
-	print(f"Nombre: {table_data[2].text}")
+	print(f"ESTADO DE CUENTA DE: {table_data[2].text}")
 	print(f"Se registraron {total} animadoras: directas {directas} e indirectas {indirectas}\n")
 	
 	animadoras = []
