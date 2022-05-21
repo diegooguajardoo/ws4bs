@@ -9,6 +9,7 @@ import csv
 #	html.render()
 #
 
+listatotal = []
 def intro():
 	noffiles = ""
 	archivos = []
@@ -85,13 +86,15 @@ archivos = intro()
 
 for i in archivos:
 	try:
-		animadoras = scrape(fl=i)
+		fragmento = scrape(fl=i)
+		listatotal = listatotal + fragmento
 	except:
 		print("ERROR: Hacen falta archivos o se encuentran nombrados diferente. Por favor revisar e intentar nuevamente")
 		quit()
-	with open('jafrarawdata.csv', 'w',) as csvfile:
-		csvwriter = csv.writer(csvfile)
-		csvwriter.writerows(animadoras)
+
+with open('jafrarawdata.csv', 'w',) as csvfile:
+	csvwriter = csv.writer(csvfile)
+	csvwriter.writerows(listatotal)
 
 
 
