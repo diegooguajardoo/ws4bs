@@ -17,11 +17,11 @@ def intro():
 		noffiles = int(noffiles)
 
 		for i in range(1, noffiles+1):
-			if noffiles == 1:
+			if i == 1:
 				filenm = "JAFRANET.html"
 				archivos.append(filenm)
 			else:
-				filenm = "JAFRANET (" + str(i) + ").html"
+				filenm = "JAFRANET (" + str(i -1) + ").html"
 				archivos.append(filenm)
 
 		print(f"Los archivos están nombrados {str(archivos)}?")
