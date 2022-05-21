@@ -89,7 +89,7 @@ for i in archivos:
 	except:
 		print("ERROR: Hacen falta archivos o se encuentran nombrados diferente. Por favor revisar e intentar nuevamente")
 		quit()
-	with open('jafra.csv', 'w',) as csvfile:
+	with open('jafra-raw-data.csv', 'w',) as csvfile:
 		csvwriter = csv.writer(csvfile)
 		csvwriter.writerows(animadoras)
 
