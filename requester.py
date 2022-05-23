@@ -1,13 +1,5 @@
-from distutils import errors
-from sqlite3 import Row
 from requests_html import HTML
 import csv
-
-#with open ("JAFRAnet.html", errors="ignore") as html_file1:
-#	source = html_file1.read()
-#	html = HTML(html=source)
-#	html.render()
-#
 
 listatotal = []
 def intro():
@@ -90,7 +82,6 @@ for i in archivos:
 		listatotal = listatotal + fragmento
 	except:
 		print("ERROR: Hacen falta archivos o se encuentran nombrados diferente. Por favor revisar e intentar nuevamente")
-		quit()
 
 with open('jafrarawdata.csv', 'w',) as csvfile:
 	csvwriter = csv.writer(csvfile)
