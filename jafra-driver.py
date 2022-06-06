@@ -12,8 +12,10 @@ PATH = "/usr/local/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
 
 driver.get("http://www.jafranet.com.mx")
+driver.set_window_size(800, 768)
+driver.set_window_position(0, 0)
 
-#print(driver.title)
+
 
 def field(id,input):
 	try:
@@ -23,41 +25,45 @@ def field(id,input):
 	except:
 		driver.quit()
 
-	time.sleep(2)
+	time.sleep(1)
 	fd.send_keys(input)
 
+def login():
+	field("cta_h","1033094")
+	username = driver.find_element(By.ID,"cta_h")
+	username.send_keys(Keys.TAB)
 
-field("cta_h","1033094")
-username = driver.find_element(By.ID,"cta_h")
-username.send_keys(Keys.TAB)
+	inpss = input("Type the pssword: ")
+	field("pwd_h", input = inpss)
+	password = driver.find_element(By.ID,"pwd_h")
+	password.send_keys(Keys.ENTER)
 
-field("pwd_h", "****")
-password = driver.find_element(By.ID,"pwd_h")
-password.send_keys(Keys.ENTER)
+	print("Authentication Passed")
+	return True
 
-print("Authentication Passed")
-Auth = True
 
-#driver.get("https://www.jafranet.com.mx/JntCgi/JNTDCXANI.pgm")
-#list = driver.find_element(By.CLASS_NAME, value="list-unstyled")
+if login() == True:
+	driver.implicitly_wait(3)
+	try:
+		barra = WebDriverWait(driver, 5).until(
+			EC.presence_of_element_located((By.ID, "ulMenus"))
+		)
+		lista = barra.find_element((By.CLASS_NAME, "nav-dinam"))
+		print(lista.text)
+	except:
+		print("No ul was found")
+		driver.quit()
+	
+	#try:
+	#	fd = WebDriverWait(driver, 20).until(
+	#            EC.presence_of_element_located(
+	#            	(By.ID, "reporte"))
+	#	)
+	#	print(fd)
+	#except:
+	#	print(f"Failed to find: {fd}")
+	#	driver.quit()
 
-if Auth == True:
-	saveas = ActionChains(driver).key_down(Keys.CONTROL)\
-	    .key_down('s').key_up(Keys.CONTROL).key_up('s')
-	saveas.perform()
-
-try:
-	fd = WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located(
-            	(By.ID, "reporte"))
-	)
-	print(fd)
-except:
-	print(f"Failed to find: {fd}")
-	driver.quit()
-
-#link = driver.find_element(By.LINK_TEXT, "Actualizado por animador")
-#link.click()
 
 #driver.quit() quits all https://www.youtube.com/watch?v=Xjv1sY630Uc&ab_channel=TechWithTim
 #driver.close() closes tab
